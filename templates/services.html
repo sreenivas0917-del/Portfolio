@@ -1,0 +1,365 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block content %}
+<body class="svcpage-body">
+
+  <main class="svcpage-main">
+
+    <!-- Enhanced Gradient Header -->
+    <section class="svcpage-header d-flex align-items-center text-center">
+      <div class="container">
+        <h1 class="svcpage-title mb-3">Empowering Businesses with <span class="text-primary">Expert BPO Solutions</span></h1>
+        <p class="svcpage-subtext mb-4">
+          At <strong>SynergiPro</strong>, we deliver reliable, scalable, and data-driven outsourcing services 
+          designed to boost your productivity and ensure client satisfaction. Explore our professional 
+          support, analytics, and management solutions tailored for your business success.
+        </p>
+        <a href="{% url 'AddPage' %}" class="svcpage-btn">Explore Our Services</a>
+      </div>
+    </section>
+    <!-- End Header -->
+
+    <!-- Services Section -->
+    <section class="svc-section py-5">
+      <div class="container">
+        <div class="row gy-4">
+
+          <!-- Service Card -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="svc-card text-center" data-hover="#1e3d58">
+              <div class="svc-icon" style="color:#1e3d58;"><i class="bi bi-telephone-outbound"></i></div>
+              <h3 class="svc-heading">Loan Recovery Services</h3>
+              <p class="svc-desc">We provide professional loan recovery solutions for financial institutions, ensuring timely collections while maintaining compliance and client relations.</p>
+              <a href="service-details.html" class="stretched-link"></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="svc-card text-center" data-hover="#ff7f50">
+              <div class="svc-icon" style="color:#ff7f50;"><i class="bi bi-chat-dots"></i></div>
+              <h3 class="svc-heading">Customer Support</h3>
+              <p class="svc-desc">Our expert team delivers end-to-end customer support, including inbound and outbound calls, chat support, and email assistance for multiple industries.</p>
+              <a href="service-details.html" class="stretched-link"></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="svc-card text-center" data-hover="#20c997">
+              <div class="svc-icon" style="color:#20c997;"><i class="bi bi-envelope"></i></div>
+              <h3 class="svc-heading">Email Support</h3>
+              <p class="svc-desc">We manage professional email support workflows, responding promptly and accurately to client queries to enhance customer satisfaction.</p>
+              <a href="service-details.html" class="stretched-link"></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="svc-card text-center" data-hover="#ff6f61">
+              <div class="svc-icon" style="color:#ff6f61;"><i class="bi bi-bar-chart-line"></i></div>
+              <h3 class="svc-heading">Data Analytics</h3>
+              <p class="svc-desc">Leverage our advanced data analytics to gain actionable insights, optimize processes, and drive informed business decisions efficiently.</p>
+              <a href="service-details.html" class="stretched-link"></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="svc-card text-center" data-hover="#6f42c1">
+              <div class="svc-icon" style="color:#6f42c1;"><i class="bi bi-people"></i></div>
+              <h3 class="svc-heading">Team Management</h3>
+              <p class="svc-desc">Our experts oversee team operations, ensuring productivity, quality assurance, and timely reporting for your BPO projects.</p>
+              <a href="service-details.html" class="stretched-link"></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="svc-card text-center" data-hover="#fd7e14">
+              <div class="svc-icon" style="color:#fd7e14;"><i class="bi bi-headset"></i></div>
+              <h3 class="svc-heading">24/7 Support</h3>
+              <p class="svc-desc">We offer round-the-clock support services, ensuring your clients receive timely assistance and exceptional experience at any time.</p>
+              <a href="service-details.html" class="stretched-link"></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="svc-feature-section py-5">
+      <div class="container text-center mb-5">
+        <h2 class="svc-subtitle">Why Choose SynergiPro?</h2>
+        <p class="svc-paragraph">Delivering professional BPO solutions with efficiency, expertise, and data-driven insights.</p>
+      </div>
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-md-4">
+            <div class="svc-feature-box text-center" data-hover="#ffbb2c">
+              <i class="bi bi-speedometer2 mb-3" style="color:#ffbb2c;"></i>
+              <h5>Fast & Efficient</h5>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="svc-feature-box text-center" data-hover="#5578ff">
+              <i class="bi bi-shield-check mb-3" style="color:#5578ff;"></i>
+              <h5>Secure & Compliant</h5>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="svc-feature-box text-center" data-hover="#e80368">
+              <i class="bi bi-people mb-3" style="color:#e80368;"></i>
+              <h5>Expert Team</h5>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="svc-feature-box text-center" data-hover="#e361ff">
+              <i class="bi bi-bar-chart-line mb-3" style="color:#e361ff;"></i>
+              <h5>Data-Driven Insights</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="svc-approach-section py-5">
+      <div class="container text-center mb-5">
+        <h2 class="svc-subtitle">Our Approach</h2>
+        <p class="svc-paragraph">At SynergiPro, we follow a systematic, client-centric approach to deliver exceptional BPO services tailored to your business needs.</p>
+      </div>
+      <div class="row gy-4">
+        <div class="col-lg-4">
+          <div class="svc-approach-box text-center" data-hover="#1e3d58">
+            <i class="bi bi-clipboard-check mb-3" style="color:#1e3d58;"></i>
+            <h5>Assessment & Strategy</h5>
+            <p>We analyze your business needs and craft a customized strategy for optimal results.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="svc-approach-box text-center" data-hover="#ff7f50">
+            <i class="bi bi-gear mb-3" style="color:#ff7f50;"></i>
+            <h5>Execution & Management</h5>
+            <p>Our experienced team executes operations efficiently while maintaining quality and compliance.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="svc-approach-box text-center" data-hover="#20c997">
+            <i class="bi bi-bar-chart-line mb-3" style="color:#20c997;"></i>
+            <h5>Analysis & Improvement</h5>
+            <p>We continuously monitor performance and optimize processes for better ROI and client satisfaction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="svc-stats-section py-5">
+      <div class="container text-center mb-5">
+        <h2 class="svc-subtitle">Our Achievements</h2>
+        <p class="svc-paragraph">Proven track record of excellence in BPO services.</p>
+      </div>
+      <div class="row text-center gy-4">
+        <div class="col-lg-3 col-md-6">
+          <h3 class="display-5 text-primary">5+</h3>
+          <p>Clients Served</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h3 class="display-5 text-success">2M+</h3>
+          <p>Calls Handled</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h3 class="display-5 text-warning">95%</h3>
+          <p>Customer Satisfaction</p>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h3 class="display-5 text-danger">1+</h3>
+          <p>Years of Experience</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="svc-cta py-5">
+      <div class="container text-center">
+        <h2 class="svc-cta-title">Ready to Boost Your Business?</h2>
+        <p class="svc-cta-desc">Partner with SynergiPro BPO Solutions for expert support and loan recovery services.</p>
+        <a href="{% url 'AddPage' %}" class="btn btn-gradient btn-lg mt-3">Get in Touch</a>
+      </div>
+    </section>
+
+  </main>
+
+  <style>
+/* ===== Code2: Header styled like Code1 ===== */
+.svcpage-header {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f9ff, #e3edff);
+  text-align: center;
+}
+
+/* h2 in Code1 → h1 here */
+.svcpage-title {
+  font-weight: 700;
+  font-size: 36px;
+  color: #002b5c;
+  margin-bottom: 12px; /* keep your mb-3 comfortable */
+}
+
+/* color the brand keyword like Code1 span color */
+.svcpage-subtext strong {
+  color: #0d6efd;
+  font-weight: 700;
+}
+
+/* paragraph sizing/spacing like Code1 */
+.svcpage-subtext {
+  max-width: 850px;
+  margin: 15px auto;
+  color: #444;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* CTA button like Code1 anchor */
+.svcpage-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 35px;
+  font-size: 16px;
+  border-radius: 30px;
+  background: #0d6efd;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+/* Nice hover (keeps Code1 spirit) */
+.svcpage-btn:hover,
+.svcpage-btn:focus {
+  background: #0b5ed7; /* darker primary */
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(13, 110, 253, 0.25);
+  text-decoration: none;
+}
+
+/* Optional: small screens tweak for readability */
+@media (max-width: 576px) {
+  .svcpage-title { font-size: 28px; }
+  .svcpage-subtext { font-size: 16px; }
+  .svcpage-btn { padding: 12px 28px; }
+}
+
+    /* ===== CARDS ===== */
+    .svc-card {
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      padding: 35px 25px;
+      transition: all 0.35s ease;
+      height: 100%;
+    }
+    .svc-icon {
+      font-size: 55px;
+      margin-bottom: 18px;
+    }
+    .svc-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    }
+    .svc-card:hover .svc-heading,
+    .svc-card:hover .svc-icon {
+      color: var(--hover-color);
+    }
+
+    /* ===== FEATURES ===== */
+    .svc-feature-section {
+      background: linear-gradient(180deg, #f8faff, #ffffff);
+    }
+    .svc-feature-box {
+      background: #fff;
+      border-radius: 18px;
+      padding: 30px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    .svc-feature-box i {
+      font-size: 60px;
+    }
+    .svc-feature-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+      color: var(--hover-color);
+    }
+
+    /* ===== APPROACH ===== */
+    .svc-approach-box {
+      background: #fff;
+      border-radius: 18px;
+      padding: 35px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      transition: all 0.35s ease;
+    }
+    .svc-approach-box i {
+      font-size: 60px;
+    }
+    .svc-approach-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+      color: var(--hover-color);
+    }
+
+    /* ===== CTA ===== */
+    .svc-cta {
+      background: linear-gradient(135deg, #4a90e2, #8ec5fc);
+      color: #fff;
+      margin-top: 40px;
+    }
+    .btn-gradient {
+      background: #fff;
+      color: #1e3d58;
+      font-weight: 600;
+      padding: 10px 30px;
+      border-radius: 25px;
+      transition: all 0.3s;
+    }
+    .btn-gradient:hover {
+      background: #1e3d58;
+      color: #fff;
+    }
+
+    /* ===== TEXT ===== */
+    .svc-subtitle {
+      font-weight: 700;
+      color: #1e3d58;
+    }
+    .svc-paragraph {
+      color: #555;
+      font-size: 15px;
+    }
+
+    body.svcpage-body {
+      background: #fdfdfd;
+    }
+
+    /* ===== Dynamic Hover Colors ===== */
+    [data-hover] {
+      --hover-color: attr(data-hover color);
+    }
+    [data-hover]:hover {
+      color: var(--hover-color);
+    }
+  </style>
+
+  <script>
+    // Apply dynamic hover color from data-hover attribute
+    document.querySelectorAll('[data-hover]').forEach(el => {
+      const color = el.getAttribute('data-hover');
+      el.addEventListener('mouseenter', () => el.style.borderColor = color);
+      el.addEventListener('mouseleave', () => el.style.borderColor = 'transparent');
+    });
+  </script>
+
+</body>
+{% endblock %}

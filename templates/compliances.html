@@ -1,0 +1,413 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Compliance & Ethics — SynergiPro BPO Solutions Pvt. Ltd.</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Inline (component-scoped) CSS - professional, modern look -->
+  <style>
+    :root{
+      --brand:#0d6efd;
+      --muted:#6c757d;
+      --card-bg:#ffffff;
+      --page-bg:#f4f7fb;
+      --accent:#eef5ff;
+    }
+
+    body{ background: var(--page-bg); font-family: "Inter", "Segoe UI", system-ui, Arial, sans-serif; color:#19202a; }
+    .compliance-section{ padding:48px 0; }
+    .compliance-header h2{ font-size:2.05rem; font-weight:700; color:#07243a; }
+    .compliance-header p{ color:var(--muted); font-size:0.98rem; }
+
+    /* Sidebar */
+    .policy-sidebar { position: sticky; top:90px; }
+    .list-group-item { cursor: pointer; color:#213243; }
+    .list-group-item.active { background: linear-gradient(90deg,var(--brand),#004aad); color:#fff; border-color:transparent; font-weight:600; }
+
+    /* Card / Panel */
+    .policy-panel { background:var(--card-bg); border-radius:10px; padding:24px; box-shadow: 0 10px 30px rgba(21,33,60,0.06); }
+    .policy-panel h4 { color:#07243a; font-weight:700; margin-bottom:12px; }
+    .policy-panel p, .policy-panel li { color:#4b5563; font-size:0.96rem; }
+
+    /* Download button */
+    .download-btn { border-radius: 10px; padding:10px 16px; }
+
+    /* Modal */
+    .modal-header{ background: linear-gradient(90deg,var(--brand),#0056d6); color:#fff; }
+    .modal .form-control{ border-radius:6px; }
+
+    /* Responsive tweaks */
+    @media (max-width:991px){
+      .policy-sidebar { position: static; top:auto; }
+      .compliance-header h2{ font-size:1.6rem; }
+    }
+
+    /* Small UI niceties */
+    .kpi { font-size:1.6rem; color:var(--brand); font-weight:700; }
+    a.policy-link { color:var(--brand); text-decoration: none; }
+    a.policy-link:hover { text-decoration: underline; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Main Container -->
+  <main class="compliance-section">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="row justify-content-center compliance-header mb-4" data-aos="fade-up">
+        <div class="col-lg-10 text-center">
+          <h2>Compliance, Security & Corporate Governance</h2>
+          <p class="mx-auto">
+            SynergiPro BPO Solutions Pvt. Ltd. is committed to running its operations with integrity, respect for the law,
+            and the highest standards of data protection and governance. This page summarizes our compliance pillars, policies,
+            certifications and how you can report concerns securely and confidentially.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Sidebar -->
+        <aside class="col-lg-4">
+          <div class="policy-sidebar">
+            <div class="policy-panel mb-3">
+              <h5 style="margin-bottom:0.5rem;">Quick Navigation</h5>
+              <p style="margin-bottom:1rem;color:var(--muted);font-size:0.95rem;">
+                Jump to policy sections or download our full compliance pack.
+              </p>
+
+              <div class="list-group list-group-flush" id="policy-nav" role="tablist" aria-label="Policy navigation">
+                <a class="list-group-item list-group-item-action active" data-target="#data-privacy">🔐 Data Privacy & Security</a>
+                <a class="list-group-item list-group-item-action" data-target="#regulations">📘 Legal & Regulatory Compliance</a>
+                <a class="list-group-item list-group-item-action" data-target="#certifications">📜 Certifications & Standards</a>
+                <a class="list-group-item list-group-item-action" data-target="#employee-ethics">👥 Employee Conduct & Ethics</a>
+                <a class="list-group-item list-group-item-action" data-target="#csr">🌍 CSR & Sustainability</a>
+                <a class="list-group-item list-group-item-action" data-target="#reporting">🛡 Whistleblower & Reporting</a>
+              </div>
+
+              <div class="mt-3 d-grid">
+                <!-- Replace href with actual PDF path -->
+                <a href="/static/docs/synergipro_compliance_policy.pdf" class="btn btn-outline-primary download-btn" download>
+                  <i class="bi bi-download me-2"></i> Download Full Compliance Pack (PDF)
+                </a>
+                <a class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#reportModal">
+                  <i class="bi bi-exclamation-triangle-fill me-2"></i> Report a Concern
+                </a>
+              </div>
+            </div>
+
+            <div class="policy-panel">
+              <h6 class="mb-2">Contact Compliance</h6>
+              <p class="mb-1"><strong>Email:</strong> <a href="mailto:compliance@synergipro.in" class="policy-link">compliance@synergipro.in</a></p>
+              <p class="mb-0"><strong>Phone (Office):</strong> <a href="tel:+917827039818" class="policy-link">+91-78270 39818</a></p>
+              <p class="mt-2 small text-muted">Confidential hotline operational 09:30–18:00 IST (Mon–Sat). For after-hours, use email.</p>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Content -->
+        <section class="col-lg-8">
+
+          <!-- Data Privacy & Security -->
+          <article id="data-privacy" class="policy-panel mb-4" data-aos="fade-right">
+            <h4>🔐 Data Privacy & Cybersecurity</h4>
+            <p>
+              Protecting customer and client data is central to our operations. We maintain a layered security posture combining
+              people, process and technology to minimize risk.
+            </p>
+
+            <div class="row g-3 mt-2">
+              <div class="col-md-6">
+                <ul>
+                  <li><strong>Encryption:</strong> 256-bit encryption for data-at-rest and TLS 1.2+ for data-in-transit.</li>
+                  <li><strong>Access Controls:</strong> Role-Based Access Control (RBAC) and periodic access reviews.</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li><strong>Monitoring:</strong> 24/7 SIEM monitoring, log retention & anomaly detection.</li>
+                  <li><strong>Endpoint Security:</strong> Managed EDR and secure configurations for remote work.</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="mt-3">
+              We run quarterly vulnerability scans and annual penetration tests by accredited third parties. All employees sign NDAs and complete mandatory privacy & security training during onboarding and annually thereafter.
+            </p>
+          </article>
+
+          <!-- Legal & Regulatory -->
+          <article id="regulations" class="policy-panel mb-4" data-aos="fade-left">
+            <h4>📘 Legal & Regulatory Compliance</h4>
+            <p>
+              SynergiPro aligns its operational policies with applicable laws and industry guidance. Our compliance areas include:
+            </p>
+            <ul>
+              <li><strong>RBI Guidelines:</strong> Collection & recovery practices, fair treatment of borrowers and grievance redressal.</li>
+              <li><strong>Indian Statutes:</strong> IT Act, Companies Act, labor laws (PF/ESI), and tax regulations.</li>
+              <li><strong>Financial Data Handling:</strong> PCI-DSS best practices where payment data is in scope.</li>
+              <li><strong>Cross-border Processing:</strong> Data transfer agreements and minimal data transfer principles for international operations.</li>
+            </ul>
+
+            <p class="mt-2">
+              We maintain an internal compliance register, perform periodic compliance audits, and publish annual compliance attestations for clients and partners upon request.
+            </p>
+          </article>
+
+          <!-- Certifications -->
+          <article id="certifications" class="policy-panel mb-4" data-aos="fade-right">
+            <h4>📜 Certifications & Standards</h4>
+            <p class="mb-2">Our systems and processes are independently certified or mapped against internationally recognized standards:</p>
+            <ul>
+              <li><strong>ISO 9001:</strong> Quality Management</li>
+              <li><strong>ISO/IEC 27001:</strong> Information Security Management</li>
+              <li><strong>PCI-DSS:</strong> Payment Card Industry Data Security Standards (where applicable)</li>
+              <li><strong>GDPR Principles:</strong> Data subject rights and lawful processing for EU residents</li>
+            </ul>
+
+            <p class="mt-2 small text-muted">
+              Certifications are renewably audited. Clients may request copies of our certification attestations under NDA.
+            </p>
+          </article>
+
+          <!-- Employee Conduct & Ethics -->
+          <article id="employee-ethics" class="policy-panel mb-4" data-aos="fade-left">
+            <h4>👥 Employee Conduct & Workplace Ethics</h4>
+            <p>
+              We maintain a robust Code of Conduct that governs employee behavior, ethical standards and professional responsibilities.
+            </p>
+
+            <div class="row g-3 mt-2">
+              <div class="col-md-6">
+                <ul>
+                  <li>Zero tolerance for discrimination, harassment or workplace misconduct.</li>
+                  <li>Mandatory background checks & periodic re-verification for all client-facing staff.</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul>
+                  <li>Compulsory training on RBI fair-practice code, privacy, and complaint handling.</li>
+                  <li>Structured escalation, performance audits and corrective action processes.</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="mt-3">
+              We also maintain an employee grievance mechanism and an independent HR review panel to ensure fair and timely resolution of internal complaints.
+            </p>
+          </article>
+
+          <!-- CSR & Sustainability -->
+          <article id="csr" class="policy-panel mb-4" data-aos="fade-right">
+            <h4>🌍 Corporate Social Responsibility & Sustainability</h4>
+            <p>
+              Corporate responsibility at SynergiPro focuses on three pillars: Environment, Community & Governance.
+            </p>
+            <ul>
+              <li><strong>Environment:</strong> Paper reduction initiatives, energy-efficient sites and e-waste recycling programs.</li>
+              <li><strong>Community:</strong> Local skilling programs, education sponsorships and partnerships with NGOs.</li>
+              <li><strong>Governance:</strong> Transparent procurement, vendor due diligence and anti-corruption policies.</li>
+            </ul>
+          </article>
+
+          <!-- Whistleblower & Reporting -->
+          <article id="reporting" class="policy-panel mb-4" data-aos="fade-up">
+            <h4>🛡 Whistleblower & Compliance Reporting</h4>
+            <p>
+              If you suspect any wrongdoing, data breach or unethical conduct, we provide secure channels to report incidents:
+            </p>
+            <ul>
+              <li><strong>Email (confidential):</strong> <a href="mailto:compliance@synergipro.in" class="policy-link">compliance@synergipro.in</a></li>
+              <li><strong>Phone:</strong> +91-78270 39818 (Mon–Sat, 09:30–18:00 IST)</li>
+              <li><strong>Secure Online Form:</strong> Use the "Report a Concern" button — submissions remain confidential.</li>
+            </ul>
+
+            <p class="mt-2">
+              All reports are triaged by our Compliance Committee. Retaliation against whistleblowers is strictly prohibited.
+            </p>
+          </article>
+
+        </section>
+      </div>
+
+      <!-- Footer disclaimer -->
+      <div class="row mt-4">
+        <div class="col text-center">
+          <p class="small text-muted mb-0">
+            <strong>Disclaimer:</strong> This page provides an overview of SynergiPro’s policies and controls. Specific contractual obligations and regulatory commitments are governed by signed agreements and the relevant statutory provisions. For official documentation, certification copies, or contractual compliance attestations, please contact <a href="mailto:compliance@synergipro.in" class="policy-link">compliance@synergipro.in</a>.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Report Modal (confidential reporting) -->
+  <div class="modal fade" id="reportModal" tabindex="-1" aria-labelledby="reportModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reportModalLabel"><i class="bi bi-exclamation-triangle-fill me-2"></i> Confidential Report a Concern</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+     <form id="reportForm" class="needs-validation" action="{% url 'submit_report' %}" method="post" enctype="multipart/form-data" novalidate>
+  {% csrf_token %}
+  <div class="modal-body">
+    <p class="small text-white bg-dark bg-opacity-10 p-2 rounded">
+      Your identity and report will be handled confidentially. Retaliation is prohibited.
+    </p>
+
+    <div class="mb-3">
+      <label class="form-label">Full name (optional)</label>
+      <input type="text" name="reporter_name" class="form-control" placeholder="Your name (leave blank to remain anonymous)">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Email (optional, for follow-up)</label>
+      <input type="email" name="reporter_email" class="form-control" placeholder="you@domain.com">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Phone (optional)</label>
+      <input type="tel" name="reporter_phone" class="form-control" placeholder="+91-XXXXXXXXXX">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Category</label>
+      <select name="category" class="form-select" required>
+        <option value="">Select category</option>
+        <option>Data Breach / Security Incident</option>
+        <option>Ethics / Misconduct</option>
+        <option>Harassment / Discrimination</option>
+        <option>Fraud / Financial Irregularity</option>
+        <option>Other</option>
+      </select>
+      <div class="invalid-feedback">Please select a category.</div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Details (required)</label>
+      <textarea name="details" class="form-control" rows="4" placeholder="Describe the issue in detail" required></textarea>
+      <div class="invalid-feedback">Please provide details of the concern.</div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Attach evidence (optional)</label>
+      <input name="evidence" type="file" class="form-control" accept=".pdf,.png,.jpg,.jpeg,.docx">
+      <div class="form-text small">
+        Max size 10MB. For sensitive documents, prefer secure email to compliance@synergipro.in
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+    <button type="submit" class="btn btn-primary">Submit Report</button>
+  </div>
+</form>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS + Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 60 });
+  </script>
+
+  <!-- Page scripts: smooth scroll, nav highlight, modal form handling -->
+  <script>
+    (function () {
+      // Smooth scrolling for sidebar links
+      const nav = document.getElementById('policy-nav');
+      if(nav){
+        nav.querySelectorAll('.list-group-item').forEach(link => {
+          link.addEventListener('click', function(e){
+            nav.querySelectorAll('.list-group-item').forEach(i=>i.classList.remove('active'));
+            this.classList.add('active');
+            const target = document.querySelector(this.dataset.target || this.getAttribute('data-target'));
+            if(target){
+              target.scrollIntoView({ behavior:'smooth', block:'start' });
+            }
+          });
+        });
+      }
+
+      // Highlight current section on scroll (simple)
+      const sections = document.querySelectorAll('article[id]');
+      const navItems = document.querySelectorAll('#policy-nav .list-group-item');
+      function onScrollHighlight(){
+        let index = sections.length;
+        while(--index && window.scrollY + 120 < sections[index].offsetTop) {}
+        navItems.forEach(item => item.classList.remove('active'));
+        const targetId = sections[index] ? '#' + sections[index].id : null;
+        if(targetId){
+          const activeItem = document.querySelector('#policy-nav .list-group-item[data-target="#' + sections[index].id + '"]');
+          if(activeItem) activeItem.classList.add('active');
+        }
+      }
+      window.addEventListener('scroll', onScrollHighlight);
+      onScrollHighlight();
+
+      // Modal form submit handling (client-side only)
+      const reportForm = document.getElementById('reportForm');
+      reportForm && reportForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!reportForm.checkValidity()) {
+          reportForm.classList.add('was-validated');
+          return;
+        }
+
+        // collect data (for production replace with actual AJAX / form action)
+        const formData = new FormData(reportForm);
+        // Example: send to your endpoint using fetch (disabled here — replace URL)
+        // fetch('/api/compliance/report', { method: 'POST', body: formData })
+
+        // For demo UI: show success message and reset
+        const modal = bootstrap.Modal.getInstance(document.getElementById('reportModal'));
+        modal.hide();
+        reportForm.reset();
+        reportForm.classList.remove('was-validated');
+
+        // Friendly confirmation (could be replaced with better UI)
+        alert('Thank you. Your report has been submitted confidentially. Our Compliance team will review and follow up if needed.');
+      });
+
+      // Accessibility: focus first input when modal shown
+      const reportModalEl = document.getElementById('reportModal');
+      if(reportModalEl){
+        reportModalEl.addEventListener('shown.bs.modal', function () {
+          const first = reportModalEl.querySelector('input[name="reporter_name"]');
+          first && first.focus();
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+
+
+
+
+{%endblock content %}

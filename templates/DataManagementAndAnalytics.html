@@ -1,0 +1,89 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<!-- Data Management & Analytics Section -->
+<section style="padding:80px 20px;background:linear-gradient(135deg,#f8fbff,#eef2f7);">
+    <div style="max-width:1200px;margin:auto;text-align:center;">
+        <h2 style="font-size:34px;color:#003366;font-weight:700;">Data Management & Analytics Services</h2>
+        <p style="font-size:18px;color:#555;max-width:850px;margin:15px auto;">
+            We help businesses transform raw data into powerful insights. Our advanced Data Management & Analytics solutions ensure 
+            secure data storage, smart visualization, workflow automation, and AI-driven insights for better decision-making.
+        </p>
+    </div>
+
+    <!-- Key Features -->
+    <div style="max-width:1200px;margin:50px auto;display:flex;flex-wrap:wrap;gap:25px;justify-content:center;">
+        <div style="flex:1;min-width:260px;background:#fff;border-radius:12px;padding:25px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.08);">
+            <h3 style="color:#0056b3;font-size:22px;">📁 Centralized Data Management</h3>
+            <p style="color:#555;">Secure data collection, storage & organization with real-time syncing across platforms.</p>
+        </div>
+        <div style="flex:1;min-width:260px;background:#fff;border-radius:12px;padding:25px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.08);">
+            <h3 style="color:#0056b3;font-size:22px;">📈 Business Intelligence Dashboards</h3>
+            <p style="color:#555;">Interactive dashboards powered by Tableau, Power BI & Google Data Studio for decision-making.</p>
+        </div>
+        <div style="flex:1;min-width:260px;background:#fff;border-radius:12px;padding:25px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.08);">
+            <h3 style="color:#0056b3;font-size:22px;">🤖 AI & Predictive Analytics</h3>
+            <p style="color:#555;">AI models to predict customer behavior, risk analysis, loan default forecasting & sales trends.</p>
+        </div>
+        <div style="flex:1;min-width:260px;background:#fff;border-radius:12px;padding:25px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,0.08);">
+            <h3 style="color:#0056b3;font-size:22px;">🔒 Secure & Compliant Data</h3>
+            <p style="color:#555;">RBI, GDPR, ISO 27001 compliant data management with encryption & role-based access control.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Workflow Section -->
+<section style="padding:70px 20px;background:#ffffff;">
+    <h2 style="text-align:center;color:#003366;font-size:30px;">Our Data Processing Workflow</h2>
+    <div style="max-width:1000px;margin:40px auto;color:#555;line-height:1.8;font-size:17px;">
+        <ol>
+            <li><strong>Requirement Analysis:</strong> Understand client data sources, goals & reporting needs.</li>
+            <li><strong>Data Collection & Integration:</strong> Import data from Excel, CRM, ERP, API, cloud or databases.</li>
+            <li><strong>Data Cleaning & Structuring:</strong> Deduplication, formatting, validation & standardization.</li>
+            <li><strong>Analytics & Visualization:</strong> Create dashboards, statistical models & forecast reports.</li>
+            <li><strong>Real-Time Reporting:</strong> Share MIS reports, insights & downloadable analytics dashboards.</li>
+        </ol>
+    </div>
+</section>
+
+<!-- Analytics Capabilities -->
+<section style="padding:80px 20px;background:#f7f9fc;">
+    <h2 style="text-align:center;color:#003366;font-size:30px;">Analytics Capabilities</h2>
+    <div style="max-width:1100px;margin:30px auto;display:flex;flex-wrap:wrap;gap:25px;justify-content:center;">
+        <div style="flex:1;min-width:270px;background:#ffffff;border-radius:12px;padding:20px;box-shadow:0 4px 15px rgba(0,0,0,0.08);">
+            <h3><strong>📊 Descriptive Analytics</strong></h3>
+            <p>Historical data tracking on sales, loans, customer activity, recoveries & revenue.</p>
+        </div>
+        <div style="flex:1;min-width:270px;background:#ffffff;border-radius:12px;padding:20px;box-shadow:0 4px 15px rgba(0,0,0,0.08);">
+            <h3><strong>📉 Diagnostic Analytics</strong></h3>
+            <p>Identify causes of delayed payments, customer drop rate, recovery failures & operational gaps.</p>
+        </div>
+        <div style="flex:1;min-width:270px;background:#ffffff;border-radius:12px;padding:20px;box-shadow:0 4px 15px rgba(0,0,0,0.08);">
+            <h3><strong>📈 Predictive Analytics</strong></h3>
+            <p>AI models to forecast customer payments, loan default probability & collection success rate.</p>
+        </div>
+        <div style="flex:1;min-width:270px;background:#ffffff;border-radius:12px;padding:20px;box-shadow:0 4px 15px rgba(0,0,0,0.08);">
+            <h3><strong>✅ Prescriptive Analytics</strong></h3>
+            <p>Action-based solutions for debt recovery, customer engagement, marketing campaigns & sales strategies.</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section style="padding:70px 20px;background:linear-gradient(135deg,#003366,#005c97);color:#fff;text-align:center;">
+    <h2 style="font-size:32px;">Transform Your Data Into Business Growth</h2>
+    <p style="font-size:18px;max-width:700px;margin:10px auto;">
+        Get intelligent dashboards, real-time reports, and AI-based insights for smarter decision-making.
+    </p>
+    <a href="{% url 'AddPage' %}" style="display:inline-block;margin-top:20px;background:#fff;color:#003366;
+        padding:15px 30px;border-radius:30px;font-weight:600;text-decoration:none;">
+        Request a Demo
+    </a>
+</section>
+
+
+
+
+{% endblock %} 

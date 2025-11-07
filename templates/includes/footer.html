@@ -1,0 +1,116 @@
+{% load static %}
+<footer id="footer" class="dynamic-footer">
+
+  <div class="footer-overlay"></div>
+  <canvas id="footerCanvas"></canvas>
+
+  <div class="footer-content">
+
+    <!-- Company Info -->
+    <div class="footer-column company-info">
+      <a href="{% url 'index' %}" class="footer-logo">
+        <div class="logo-glow">
+          <img src="{% static '../static/img/logo.png' %}" alt="SynergiPro Logo">
+        </div>
+        <span>SYNERGIPRO BPO SOLUTIONS PRIVATE LIMITED</span>
+      </a>
+      <p>Jb/6 1st Floor, Plot No.74/666, Jagda, Sundergarh,<br>
+        Koida, Odisha, India - 770014</p>
+      <p><strong>Phone:</strong> +91-7827039818</p>
+      <p><strong>Email:</strong> Finance@synergipro.in</p>
+    </div>
+
+    <!-- Useful Links -->
+    <div class="footer-column">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
+        <li><a href="{% url 'terms&conditions' %}">Terms of Use</a></li>
+        <li><a href="{% url 'privacyPolicy' %}">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Services Offered -->
+    <div class="footer-column">
+      <h4>Our Services</h4>
+      <ul>
+        <li><a href="{% url 'LoanRecoveryServices' %}">Loan Recovery Services</a></li>
+        <li><a href="{% url 'CustomerCareAndSupport' %}">Customer Care & Support</a></li>
+        <li><a href="{% url 'EmailAndChatSupport' %}">Email & Chat Support</a></li>
+        <li><a href="{% url 'TelicallingAndLeadGeneration' %}">Telecalling & Lead Generation</a></li>
+        <li><a href="{% url 'DataManagementAndAnalytics' %}">Data Management & Analytics</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <!-- ✅ Centered Social Icons -->
+  <div class="footer-social-center">
+    <div class="social-icons highlight">
+      <a href="#"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
+      <a href="#"><i class="bi bi-twitter"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <div class="footer-divider"></div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>© 2025 <strong>SynergiPro</strong> | All Rights Reserved</p>
+    <p>Clarity • Commitment • Collection</p>
+  </div>
+</footer>
+
+<script>
+  // Background particle animation
+  const canvas = document.getElementById('footerCanvas');
+  const ctx = canvas.getContext('2d');
+  let particles = [];
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = 350;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  function createParticles() {
+    particles = [];
+    for (let i = 0; i < 60; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        radius: Math.random() * 2,
+        color: `rgba(255,255,255,0.8)`,
+        velocityX: (Math.random() - 0.5) * 0.4,
+        velocityY: (Math.random() - 0.5) * 0.4
+      });
+    }
+  }
+
+  function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.fill();
+
+      p.x += p.velocityX;
+      p.y += p.velocityY;
+
+      if (p.x < 0 || p.x > canvas.width) p.velocityX *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.velocityY *= -1;
+    });
+    requestAnimationFrame(animateParticles);
+  }
+
+  createParticles();
+  animateParticles();
+</script>

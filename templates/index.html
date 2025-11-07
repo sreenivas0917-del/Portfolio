@@ -1,0 +1,1150 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block content %}
+
+
+<!-- Preloader -->
+<div id="preloader">
+  <img src="{% static 'img/logo.png' %}" alt="Company Logo" class="preloader-logo">
+</div>
+
+<main class="main">
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background" style="position: relative; overflow: hidden; height: 100vh;">
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline id="heroVideo" 
+         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+    <source src="{% static 'coursel/14114346_1920_1080_30fps.mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div id="hero-carousel" class="carousel slide carousel-fade" 
+       data-bs-ride="carousel" data-bs-interval="5000" 
+       style="position: relative; height: 100%; z-index: 2;">
+
+    <!-- Carousel Item 1 -->
+    <div class="carousel-item active" 
+         style="position: relative; height: 100vh; display: flex; align-items: center; justify-content: center;">
+      
+      <!-- Dark Overlay -->
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+                  background: rgba(0, 0, 0, 0.55); z-index: 1;"></div>
+
+      <div class="container" 
+           style="position: relative; z-index: 2; color: #fff; text-align: center; 
+                  background: rgba(0, 0, 0, 0.5); border-radius: 12px; padding: 50px 30px; 
+                  max-width: 700px; box-shadow: 0 6px 30px rgba(0,0,0,0.4);">
+        <h2 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 18px;">We are professional in Collections</h2>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">We ensure high-quality recovery with compliance and customer respect.</p>
+        <a href="{% url 'AddPage' %}" 
+           class="btn-get-started" 
+           style="background: #007bff; color: #fff; padding: 12px 28px; border-radius: 8px; 
+                  text-decoration: none; display: inline-block; font-weight: 600;">Read More</a>
+      </div>
+    </div>
+
+    <!-- Carousel Item 2 -->
+    <div class="carousel-item" 
+         style="position: relative; height: 100vh; display: flex; align-items: center; justify-content: center;">
+      
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+                  background: rgba(0, 0, 0, 0.55); z-index: 1;"></div>
+
+      <div class="container" 
+           style="position: relative; z-index: 2; color: #fff; text-align: center; 
+                  background: rgba(0, 0, 0, 0.5); border-radius: 12px; padding: 50px 30px; 
+                  max-width: 700px; box-shadow: 0 6px 30px rgba(0,0,0,0.4);">
+        <h2 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 18px;">Trusted Collection Partner</h2>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">Delivering consistent results while maintaining brand reputation.</p>
+        <a href="{% url 'AddPage' %}" 
+           class="btn-get-started" 
+           style="background: #007bff; color: #fff; padding: 12px 28px; border-radius: 8px; 
+                  text-decoration: none; display: inline-block; font-weight: 600;">Read More</a>
+      </div>
+    </div>
+
+    <!-- Carousel Item 3 -->
+    <div class="carousel-item" 
+         style="position: relative; height: 100vh; display: flex; align-items: center; justify-content: center;">
+      
+      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+                  background: rgba(0, 0, 0, 0.55); z-index: 1;"></div>
+
+      <div class="container" 
+           style="position: relative; z-index: 2; color: #fff; text-align: center; 
+                  background: rgba(0, 0, 0, 0.5); border-radius: 12px; padding: 50px 30px; 
+                  max-width: 700px; box-shadow: 0 6px 30px rgba(0,0,0,0.4);">
+        <h2 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 18px;">Performance Driven Team</h2>
+        <p style="font-size: 1.05rem; margin-bottom: 25px;">Our team ensures professional follow-ups and customer satisfaction.</p>
+        <a href="{% url 'AddPage' %}" 
+           class="btn-get-started" 
+           style="background: #007bff; color: #fff; padding: 12px 28px; border-radius: 8px; 
+                  text-decoration: none; display: inline-block; font-weight: 600;">Read More</a>
+      </div>
+    </div>
+
+    <!-- Carousel Controls -->
+    <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev" style="z-index: 3;">
+      <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next" style="z-index: 3;">
+      <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+    </a>
+  </div>
+</section>
+
+
+<!-- About Section -->
+<section id="about" class="about section">
+
+  <!-- Decorative Floating Gradient Shapes -->
+  <div class="gradient-blob blob1"></div>
+  <div class="gradient-blob blob2"></div>
+  <div class="gradient-blob blob3"></div>
+
+  <div class="container-fluid px-4 py-5 position-relative">
+    <div class="row align-items-center justify-content-center g-5">
+
+      <!-- Left: Image Block -->
+      <div class="col-lg-6 position-relative about-image-wrapper" data-aos="zoom-in" data-aos-delay="200">
+        <div class="about-image-glass"></div>
+        <img src="{% static 'img/about.jpg' %}" alt="About SynergiPro BPO Solutions" class="img-fluid rounded-5 shadow-lg about-image">
+        <div class="floating-badge">
+          <i class="bi bi-award-fill"></i>
+          <span>Trusted BPO Partner</span>
+        </div>
+      </div>
+
+      <!-- Right: Content Block -->
+      <div class="col-lg-6 about-content" data-aos="fade-up" data-aos-delay="150">
+        <div class="about-card shadow-lg rounded-5 p-5">
+          <h2 class="about-heading mb-3">SynergiPro BPO Solutions Pvt Ltd</h2>
+          <h4 class="about-subtitle text-uppercase fw-bold">Est. 2025</h4>
+          <h3 class="story-title mt-3">Our Story</h3>
+
+          <p class="about-text mt-3">
+            <strong>SynergiPro BPO Solutions Pvt Ltd</strong> is a forward-thinking
+            <span class="highlight">Business Process Outsourcing (BPO)</span> company
+            specializing in <strong>loan recovery, data analytics, customer support, chat support, and email support</strong>.
+            We collaborate with financial institutions and enterprises to streamline operations, ensure compliance,
+            and deliver measurable outcomes through innovation and trust.
+          </p>
+
+          <ul class="about-list mt-4">
+            <li><i class="bi bi-check2-circle"></i> Expertise in <strong>debt recovery & telecalling</strong></li>
+            <li><i class="bi bi-headset"></i> 24/7 <strong>chat and customer support</strong></li>
+            <li><i class="bi bi-bar-chart-line"></i> Data-driven <strong>analytics & compliance insights</strong></li>
+          </ul>
+
+          <p class="about-text mt-4">
+            With a foundation of transparency, integrity, and confidentiality,
+            we employ cutting-edge technology and RBI-compliant processes
+            to deliver efficient and secure outsourcing solutions — empowering our clients to grow faster and smarter.
+          </p>
+
+          <div class="signature mt-4">
+            <img src="{% static 'img/signature.png' %}" alt="Signature" class="signature-img">
+            <span class="signature-text">Team SynergiPro</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- /About Section -->
+
+
+<!-- Services Section -->
+<section id="services" class="services section light-background">
+
+  <div class="container">
+
+    <div class="row gy-4 justify-content-center text-center mb-5">
+      <div class="col-lg-8">
+        <h2 class="section-title">Our Core <span class="text-primary">Services</span></h2>
+        <p class="section-subtitle">Empowering Businesses with Innovative BPO & Tech Solutions</p>
+      </div>
+    </div>
+
+    <div class="row gy-4">
+
+      <!-- Loan Recovery -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item item-cyan position-relative">
+          <div class="icon"><i class="bi bi-cash-coin"></i></div>
+          <h3>Loan Recovery Solutions</h3>
+          <p>
+            RBI-compliant and ethical loan recovery solutions ensuring efficiency,
+            transparency, and professional client communication for better recovery rates.
+          </p>
+        </div>
+      </div>
+
+      <!-- Data Analysis -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item item-orange position-relative">
+          <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <h3>Data Analysis & Reporting</h3>
+          <p>
+            Real-time data insights, performance dashboards, and compliance reports
+            designed to enhance decision-making and operational growth.
+          </p>
+        </div>
+      </div>
+
+      <!-- Customer Support -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item item-teal position-relative">
+          <div class="icon"><i class="bi bi-headset"></i></div>
+          <h3>Customer Support</h3>
+          <p>
+            Omnichannel 24/7 support — chat, calls, and email — crafted to
+            deliver exceptional customer experiences and boost satisfaction.
+          </p>
+        </div>
+      </div>
+
+      <!-- Compliance & Risk -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item item-red position-relative">
+          <div class="icon"><i class="bi bi-shield-lock"></i></div>
+          <h3>Compliance & Risk Management</h3>
+          <p>
+            Stay fully compliant with RBI and IT regulations, ensuring secure,
+            ethical, and data-driven business operations across every level.
+          </p>
+        </div>
+      </div>
+
+      <!-- Telecalling -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-item item-indigo position-relative">
+          <div class="icon"><i class="bi bi-telephone-inbound"></i></div>
+          <h3>Telecalling Services</h3>
+          <p>
+            Dynamic inbound and outbound teams focused on customer engagement,
+            lead generation, and post-service communication excellence.
+          </p>
+        </div>
+      </div>
+
+      <!-- BPO Outsourcing -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-item item-pink position-relative">
+          <div class="icon"><i class="bi bi-people"></i></div>
+          <h3>BPO Outsourcing</h3>
+          <p>
+            Scalable outsourcing services for your back-office, support,
+            and customer engagement needs — designed to grow with you.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Decorative Soft Gradient Background -->
+  <div class="services-gradient"></div>
+
+</section>
+<!-- /Services Section -->
+
+<!-- Company Overview Section -->
+<section id="company" class="company section py-5 bg-white">
+  <div class="container" data-aos="fade-up">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">About <span class="text-primary">SynergiPro</span></h2>
+      <p class="text-muted">Delivering trust-driven outsourcing solutions with efficiency and transparency.</p>
+    </div>
+
+    <div class="row g-4 align-items-center">
+
+      <div class="col-lg-6">
+        <div class="company-image-wrap">
+          <img src="{% static 'img/aboutContent.jpg' %}" class="img-fluid rounded shadow company-image" alt="Company Overview">
+          <div class="company-sticker" aria-hidden="true">
+            <strong>Since 2025</strong>
+            <span>Trusted BPO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="company-card p-4 rounded-3">
+          <h4 class="fw-bold mb-3">Who We Are</h4>
+          <p>SynergiPro BPO Solutions Pvt Ltd is a trusted outsourcing partner specializing in <strong>loan recovery, customer support, chat and email support, and data analytics</strong>. With years of experience in financial services and customer engagement, we help businesses streamline operations while ensuring compliance and efficiency.</p>
+
+          <h4 class="fw-bold mt-4 mb-3">Our Mission</h4>
+          <p>To empower financial institutions and businesses with <strong>cost-effective, secure, and transparent outsourcing solutions</strong> while maintaining the highest level of customer satisfaction.</p>
+
+          <h4 class="fw-bold mt-4 mb-3">Our Vision</h4>
+          <p>To be India’s leading <strong>BPO partner for loan recovery and customer lifecycle management</strong>, recognized for integrity, innovation, and results.</p>
+
+          <div class="mt-4">
+            <ul class="list-unstyled company-benefits">
+              <li><i class="bi bi-check-circle text-success"></i> RBI-Compliant Recovery Process</li>
+              <li><i class="bi bi-check-circle text-success"></i> Data-Driven Decision Making</li>
+              <li><i class="bi bi-check-circle text-success"></i> Skilled Workforce & 24/7 Support</li>
+              <li><i class="bi bi-check-circle text-success"></i> Transparency & Client-Centric Approach</li>
+            </ul>
+          </div>
+
+          <div class="company-stats mt-4 d-flex flex-wrap gap-3">
+            <div class="stat-item">
+              <div class="stat-value">98%</div>
+              <div class="stat-label">Client Retention</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">24/7</div>
+              <div class="stat-label">Support Coverage</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">RBI</div>
+              <div class="stat-label">Compliant</div>
+            </div>
+          </div>
+        </div><!-- /.company-card -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section py-5 bg-light">
+  <div class="container" data-aos="fade-up">
+
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">What Our <span class="text-primary">Clients Say</span></h2>
+      <p class="text-muted">Hear from businesses who have leveraged SynergiPro’s expertise in debt recovery and customer support.</p>
+    </div>
+
+    <div class="swiper testimonials-slider" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+
+        <!-- Testimonial 1 -->
+        <div class="swiper-slide">
+          <div class="testimonial-item position-relative bg-white p-4 shadow-sm rounded">
+            <p>"SynergiPro has transformed our debt recovery process. Their team is professional, responsive, and delivers results while maintaining compliance."</p>
+            <h5 class="mt-3">Rakesh Sharma</h5>
+            <span>Finance Manager, ABC Bank</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="swiper-slide">
+          <div class="testimonial-item position-relative bg-white p-4 shadow-sm rounded">
+            <p>"The customer support services provided by SynergiPro are top-notch. Our clients have consistently appreciated the timely and courteous responses."</p>
+            <h5 class="mt-3">Anita Verma</h5>
+            <span>Operations Head, XYZ Fintech</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="swiper-slide">
+          <div class="testimonial-item position-relative bg-white p-4 shadow-sm rounded">
+            <p>"Data analytics from SynergiPro helped us optimize our telecalling campaigns. Their insights are actionable and very accurate."</p>
+            <h5 class="mt-3">Vikram Singh</h5>
+            <span>CEO, Loan Recovery Solutions Ltd.</span>
+          </div>
+        </div>
+
+        <!-- Testimonial 4 -->
+        <div class="swiper-slide">
+          <div class="testimonial-item position-relative bg-white p-4 shadow-sm rounded">
+            <p>"Professional, efficient, and reliable. SynergiPro’s team understands our business needs and executes flawlessly."</p>
+            <h5 class="mt-3">Sonal Kapoor</h5>
+            <span>Head of Customer Service, FinEdge</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Swiper Pagination -->
+      <div class="swiper-pagination mt-3"></div>
+
+      <!-- ✅ Added Navigation Buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Achievements / Key Metrics Section -->
+<section id="metrics" class="metrics section py-5 bg-light">
+  <h1>Our <span class="text-primary">Achivements</span></h1>
+  <div class="container" data-aos="fade-up">
+    <div class="row text-center">
+
+      <div class="col-md-3 mb-4">
+        <h2 class="fw-bold text-primary"><span class="metric-value" data-target="5">5</span><span class="metric-suffix">+</span></h2>
+        <p>Clients Served</p>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <h2 class="fw-bold text-primary"><span class="metric-value" data-target="2000000">2</span><span class="metric-suffix">M+</span></h2>
+        <p>Calls Handled</p>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <h2 class="fw-bold text-primary"><span class="metric-value" data-target="95">95</span><span class="metric-suffix">%</span></h2>
+        <p>Recovery Rate</p>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <h2 class="fw-bold text-primary"><span class="metric-value" data-target="24">24</span><span class="metric-suffix">/7</span></h2>
+        <p>Customer Support</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Process Section -->
+<section id="process" class="proc-section proc-padding proc-bg">
+  <div class="proc-wrapper" data-aos="fade-up">
+    <div class="proc-header">
+      <h2 class="proc-title">Our <span class="text-primary">Process</span></h2>
+      <p class="proc-sub">How SynergiPro delivers efficient and compliant services</p>
+    </div>
+
+    <div class="proc-grid">
+
+      <div class="proc-col">
+        <div class="proc-card">
+          <div class="proc-icon" aria-hidden="true">
+            <!-- person-check style SVG -->
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M15 12a3 3 0 1 0-6 0" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 20c0-3.314 2.686-6 6-6h4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 7l-3 3-1.5-1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 class="proc-step-title">Client Onboarding</h4>
+          <p class="proc-step-desc">We gather your requirements and understand your debt portfolio.</p>
+        </div>
+      </div>
+
+      <div class="proc-col">
+        <div class="proc-card">
+          <div class="proc-icon" aria-hidden="true">
+            <!-- telephone-inbound style SVG -->
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.86 19.86 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.86 19.86 0 0 1 2.08 4.18 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.72c.12.81.3 1.59.54 2.33a2 2 0 0 1-.45 2.11L8.91 10.91a16 16 0 0 0 6 6l1.75-1.38a2 2 0 0 1 2.11-.45c.74.24 1.52.42 2.33.54A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 3v4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              <path d="M20 5h-4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4 class="proc-step-title">Telecalling & Engagement</h4>
+          <p class="proc-step-desc">Our trained agents contact debtors through calls, emails, and chats.</p>
+        </div>
+      </div>
+
+      <div class="proc-col">
+        <div class="proc-card">
+          <div class="proc-icon" aria-hidden="true">
+            <!-- graph-up style SVG -->
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 3v18h18" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18 9l-5 5-4-4-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 class="proc-step-title">Data Analysis</h4>
+          <p class="proc-step-desc">We monitor performance, track recovery, and provide detailed reports.</p>
+        </div>
+      </div>
+
+      <div class="proc-col">
+        <div class="proc-card">
+          <div class="proc-icon" aria-hidden="true">
+            <!-- award style SVG -->
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2l2.09 4.26L18 7l-3 2.91L15.18 14 12 11.77 8.82 14 9 9.91 6 7l3.91-.74L12 2z" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 22l4-4 4 2 4-2 4 4" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4 class="proc-step-title">Results & Optimization</h4>
+          <p class="proc-step-desc">We improve strategies based on insights to maximize recovery efficiency.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Debt Recovery Performance Section -->
+<section id="recovery-performance" class="section-recovery">
+  <div class="recovery-container">
+
+    <!-- Heading -->
+    <div class="recovery-header">
+      <h2 class="recovery-title">Debt Collection & <span class="text-primary">Recovery Performance</span></h2>
+      <p class="recovery-subtitle">
+        SynergiPro BPO Solutions Pvt Ltd delivers full-cycle collections from DPD 0–365+, 
+        maximizing recovery with precision, compliance, and empathy.
+      </p>
+    </div>
+
+    <!-- DPD Stage Cards -->
+    <div class="recovery-stages">
+      <div class="recovery-stage-card">
+        <h5>DPD 0–30</h5>
+        <p>Early reminders & proactive engagement reduce overdue risks.</p>
+        <div class="progress-track">
+          <div class="progress-fill green" style="width: 85%;"></div>
+        </div>
+        <span class="progress-value">85% Recovery</span>
+      </div>
+
+      <div class="recovery-stage-card">
+        <h5>DPD 31–60</h5>
+        <p>Structured communication & negotiation drive better outcomes.</p>
+        <div class="progress-track">
+          <div class="progress-fill teal" style="width: 60%;"></div>
+        </div>
+        <span class="progress-value">60% Recovery</span>
+      </div>
+
+      <div class="recovery-stage-card">
+        <h5>DPD 61–90</h5>
+        <p>Escalation via settlement plans and senior agent intervention.</p>
+        <div class="progress-track">
+          <div class="progress-fill amber" style="width: 50%;"></div>
+        </div>
+        <span class="progress-value">50% Recovery</span>
+      </div>
+
+      <div class="recovery-stage-card">
+        <h5>DPD 91–180</h5>
+        <p>Legal notices and structured settlement coordination.</p>
+        <div class="progress-track">
+          <div class="progress-fill orange" style="width: 30%;"></div>
+        </div>
+        <span class="progress-value">30% Recovery</span>
+      </div>
+
+      <div class="recovery-stage-card">
+        <h5>DPD 181–365</h5>
+        <p>High-risk strategies with risk-based negotiations.</p>
+        <div class="progress-track">
+          <div class="progress-fill red" style="width: 20%;"></div>
+        </div>
+        <span class="progress-value">20% Recovery</span>
+      </div>
+
+      <div class="recovery-stage-card">
+        <h5>DPD 365+</h5>
+        <p>Litigation support & long-term recovery management.</p>
+        <div class="progress-track">
+          <div class="progress-fill darkred" style="width: 10%;"></div>
+        </div>
+        <span class="progress-value">10% Recovery</span>
+      </div>
+    </div>
+
+    <!-- Key Metrics -->
+    <div class="recovery-metrics">
+      <div class="metric-tile">
+        <h4>Total Accounts Managed</h4>
+        <p><strong>2,50,000+</strong> Active Accounts</p>
+      </div>
+      <div class="metric-tile">
+        <h4>Monthly Recovery</h4>
+        <p><strong>₹5.5 Crores</strong> Recovered</p>
+      </div>
+      <div class="metric-tile">
+        <h4>Client Satisfaction</h4>
+        <p><strong>95%+</strong> Retention & Trust</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Recovery Dashboard Section -->
+<section id="recovery-dashboard" class="rc-section">
+  <div class="rc-container" data-aos="fade-up">
+
+    <!-- Section Title -->
+    <div class="rc-header">
+      <h2 class="rc-heading">Structured Debt <span class="text-primary">Recovery Dashboard</span></h2>
+      <p class="rc-lead">
+        Our step-by-step recovery model maximizes collection efficiency
+        across all delinquency stages while maintaining professionalism, customer dignity, and legal compliance.
+      </p>
+    </div>
+
+    <!-- Recovery Stages -->
+    <div class="rc-grid">
+      <!-- DPD 0-30 -->
+      <div class="rc-col">
+        <div class="rc-card">
+          <h4 class="rc-card-title">DPD 0-30</h4>
+          <p class="rc-card-text">
+            Preventive reminders via calls, emails, and SMS to ensure timely payments and avoid future defaults.
+          </p>
+        </div>
+      </div>
+
+      <!-- DPD 31-90 -->
+      <div class="rc-col">
+        <div class="rc-card">
+          <h4 class="rc-card-title">DPD 31-90</h4>
+          <p class="rc-card-text">
+            Personalized recovery calls, automated reminders, and proactive customer engagement to reduce delinquency.
+          </p>
+        </div>
+      </div>
+
+      <!-- DPD 91-180 -->
+      <div class="rc-col">
+        <div class="rc-card">
+          <h4 class="rc-card-title">DPD 91-180</h4>
+          <p class="rc-card-text">
+            Negotiations, settlement offers, structured payment plans, continuous monitoring and follow-ups.
+          </p>
+        </div>
+      </div>
+
+      <!-- DPD 181-365+ -->
+      <div class="rc-col">
+        <div class="rc-card">
+          <h4 class="rc-card-title">DPD 181-365+</h4>
+          <p class="rc-card-text">
+            Legal notices, field visits, skip tracing, and legal escalation strategies while ensuring compliance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Collection Achievements Section -->
+<section id="collection-achievements" class="ca-section">
+  <div class="ca-container" data-aos="fade-up">
+
+    <div class="ca-header">
+      <h2 class="ca-heading">Our Collection <span class="text-primary">Achievements</span></h2>
+      <p class="ca-lead">
+        Delivering consistent and measurable results through data-driven strategies, ethical recovery practices, 
+        and tailored client solutions.
+      </p>
+    </div>
+
+    <div class="ca-grid">
+      <!-- Achievement Card -->
+      <div class="ca-col">
+        <div class="ca-card">
+          <h3 class="ca-value">95%</h3>
+          <p class="ca-text">Recovery success rate on early-stage DPD 0–90 cases</p>
+        </div>
+      </div>
+
+      <div class="ca-col">
+        <div class="ca-card">
+          <h3 class="ca-value">30%</h3>
+          <p class="ca-text">Effective recovery in mid-stage buckets (91–180 days)</p>
+        </div>
+      </div>
+
+      <div class="ca-col">
+        <div class="ca-card">
+          <h3 class="ca-value">20%</h3>
+          <p class="ca-text">Long-term overdue recovery (181–365+ days)</p>
+        </div>
+      </div>
+
+      <div class="ca-col">
+        <div class="ca-card">
+          <h3 class="ca-value">5+</h3>
+          <p class="ca-text">Industries served with customized, scalable recovery models</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- OmniChannel Engagement Section -->
+<section id="omni-engagement" class="omni-section">
+  <div class="omni-container">
+    <!-- Section Heading -->
+    <div class="omni-header" data-aos="fade-up">
+      <h2 class="omni-title">Omni-Channel <span class="text-primary">Recovery Approach</span></h2>
+      <p class="omni-subtitle">
+        A unified blend of voice, chat, and digital communication channels that drive faster resolutions and improved customer relationships.
+      </p>
+    </div>
+
+    <!-- Engagement Grid -->
+    <div class="omni-grid" data-aos="fade-up" data-aos-delay="100">
+      
+      <!-- Card 1 -->
+      <div class="omni-card">
+        <div class="omni-icon">
+          <i class="bi bi-telephone-outbound-fill"></i>
+        </div>
+        <h4 class="omni-card-title">Voice Calls</h4>
+        <p class="omni-card-text">
+          Expert agents deliver personalized telecalling with empathy and resolution-driven communication.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="omni-card">
+        <div class="omni-icon">
+          <i class="bi bi-chat-dots-fill"></i>
+        </div>
+        <h4 class="omni-card-title">Live Chat</h4>
+        <p class="omni-card-text">
+          Real-time chat via WhatsApp, SMS, and website widgets ensures continuous support and reminders.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="omni-card">
+        <div class="omni-icon">
+          <i class="bi bi-envelope-paper-fill"></i>
+        </div>
+        <h4 class="omni-card-title">Email Campaigns</h4>
+        <p class="omni-card-text">
+          Automated email outreach for formal notifications, settlement proposals, and client updates.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="omni-card">
+        <div class="omni-icon">
+          <i class="bi bi-person-bounding-box"></i>
+        </div>
+        <h4 class="omni-card-title">On-Field Visits</h4>
+        <p class="omni-card-text">
+          Dedicated on-ground agents ensure compliance-based collections and ethical engagement.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Smart Recovery Lifecycle Section -->
+<section id="smart-recovery" class="smart-section">
+  <div class="smart-wrapper">
+
+    <!-- Section Heading -->
+    <div class="smart-header" data-aos="fade-up">
+      <h2 class="smart-title">Our Streamlined <span class="text-primary">Debt Recovery Lifecycle</span></h2>
+      <p class="smart-subtitle">
+        A structured, compliant, and technology-driven recovery model that ensures efficiency, transparency, and customer dignity throughout every stage.
+      </p>
+    </div>
+
+    <!-- Timeline Container -->
+    <div class="smart-timeline" data-aos="fade-up" data-aos-delay="100">
+
+      <!-- Stage 1 -->
+      <div class="smart-step">
+        <div class="smart-marker"></div>
+        <div class="smart-content">
+          <h4 class="smart-step-title">DPD 0–30: Early Reminder & Awareness</h4>
+          <p class="smart-step-text">
+            Gentle, customer-friendly communication via SMS, email, and voice calls to remind borrowers of due payments. Guidance and support are provided to ensure timely repayment without any pressure or escalation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stage 2 -->
+      <div class="smart-step">
+        <div class="smart-marker"></div>
+        <div class="smart-content">
+          <h4 class="smart-step-title">DPD 31–60: Personalized Follow-Up & Negotiation</h4>
+          <p class="smart-step-text">
+            Direct interaction to understand the customer’s financial challenges. Customized repayment plans and restructuring options are offered to prevent further delinquency while preserving strong customer relationships.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stage 3 -->
+      <div class="smart-step">
+        <div class="smart-marker"></div>
+        <div class="smart-content">
+          <h4 class="smart-step-title">DPD 61–120: Structured Recovery & Field Engagement</h4>
+          <p class="smart-step-text">
+            Escalated follow-ups using a blended approach of calls, emails, and physical visits by certified recovery agents. High-risk accounts are prioritized using analytics and risk segmentation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stage 4 -->
+      <div class="smart-step">
+        <div class="smart-marker"></div>
+        <div class="smart-content">
+          <h4 class="smart-step-title">DPD 121–180: Pre-Litigation Strategy & Settlements</h4>
+          <p class="smart-step-text">
+            Settlement options, restructuring models, and formal notices are introduced. Legal advisory teams evaluate accounts for potential litigation based on value, risk, and compliance standards.
+          </p>
+        </div>
+      </div>
+
+      <!-- Stage 5 -->
+      <div class="smart-step">
+        <div class="smart-marker"></div>
+        <div class="smart-content">
+          <h4 class="smart-step-title">DPD 181–365+: Legal Action & Final Closure</h4>
+          <p class="smart-step-text">
+            Formal legal actions are initiated in collaboration with empaneled legal experts. Final settlements, compliance documentation, and closure reports are shared with clients for complete transparency.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RBI Compliance & Regulatory Adherence Section -->
+<section id="regulatory-sec" class="regulatory-wrapper">
+  <div class="regulatory-container">
+
+    <!-- Header -->
+    <div class="regulatory-header">
+      <h2 class="regulatory-title">RBI Compliance & <span class="text-primary">Regulatory Adherence</span></h2>
+      <p class="regulatory-subtext">
+        We strictly adhere to all Reserve Bank of India (RBI) guidelines to ensure secure, legal, and transparent recovery operations.
+      </p>
+    </div>
+
+    <!-- Compliance Cards -->
+    <div class="regulatory-grid">
+
+      <div class="regulatory-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="regulatory-icon">
+          <i class="bi bi-shield-lock"></i>
+        </div>
+        <h3 class="regulatory-heading">Secure Data Handling</h3>
+        <p class="regulatory-text">
+          All financial and personal data is processed following RBI-approved security standards.
+        </p>
+      </div>
+
+      <div class="regulatory-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="regulatory-icon">
+          <i class="bi bi-file-earmark-text"></i>
+        </div>
+        <h3 class="regulatory-heading">Regulatory Reporting</h3>
+        <p class="regulatory-text">
+          Timely and accurate reporting to banks and financial institutions ensures full compliance with RBI norms.
+        </p>
+      </div>
+
+      <div class="regulatory-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="regulatory-icon">
+          <i class="bi bi-people"></i>
+        </div>
+        <h3 class="regulatory-heading">Trained Compliance Experts</h3>
+        <p class="regulatory-text">
+          Our staff undergo continuous RBI guideline training to ensure risk-free and ethical recovery operations.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- RBI Guidelines Compliance Section -->
+<section id="rbi-standards" class="rbi-standards-wrap">
+  <div class="rbi-standards-container" data-aos="fade-up">
+
+    <!-- Section Header -->
+    <div class="rbi-standards-header">
+      <h2 class="rbi-standards-title">RBI Guidelines for <span class="text-primary">Recovery Agents</span></h2>
+      <p class="rbi-standards-description">
+        We strictly follow the Reserve Bank of India guidelines to ensure safe, ethical, and compliant recovery processes for all our clients.
+      </p>
+    </div>
+
+    <!-- Guidelines Grid -->
+    <div class="rbi-standards-grid">
+
+      <div class="rbi-standards-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="rbi-standards-icon">
+          <i class="bi bi-shield-lock"></i>
+        </div>
+        <h4 class="rbi-standards-heading">Due Diligence & Verification</h4>
+        <p class="rbi-standards-text">
+          All recovery agents are thoroughly vetted, including background and pre-employment checks, ensuring reliability and accountability.
+        </p>
+      </div>
+
+      <div class="rbi-standards-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="rbi-standards-icon">
+          <i class="bi bi-telephone-inbound"></i>
+        </div>
+        <h4 class="rbi-standards-heading">Authorized Communication</h4>
+        <p class="rbi-standards-text">
+          Agents carry bank-issued authorization letters and ID cards. All borrower interactions are recorded to maintain transparency and compliance.
+        </p>
+      </div>
+
+      <div class="rbi-standards-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="rbi-standards-icon">
+          <i class="bi bi-journal-text"></i>
+        </div>
+        <h4 class="rbi-standards-heading">Training & Certification</h4>
+        <p class="rbi-standards-text">
+          All recovery agents undergo RBI/IIBF-certified training on ethical practices, privacy, and lawful recovery processes.
+        </p>
+      </div>
+
+      <div class="rbi-standards-card" data-aos="zoom-in" data-aos-delay="400">
+        <div class="rbi-standards-icon">
+          <i class="bi bi-bank"></i>
+        </div>
+        <h4 class="rbi-standards-heading">Legal Recovery Only</h4>
+        <p class="rbi-standards-text">
+          We strictly follow legal frameworks like SARFAESI Act and enforce repossessions and asset recoveries in a lawful manner.
+        </p>
+      </div>
+
+      <div class="rbi-standards-card" data-aos="zoom-in" data-aos-delay="500">
+        <div class="rbi-standards-icon">
+          <i class="bi bi-people"></i>
+        </div>
+        <h4 class="rbi-standards-heading">Borrower Grievances</h4>
+        <p class="rbi-standards-text">
+          Any complaints or disputes are addressed promptly. No cases are forwarded to agents until grievances are resolved, in line with RBI directives.
+        </p>
+      </div>
+
+      <div class="rbi-standards-card" data-aos="zoom-in" data-aos-delay="600">
+        <div class="rbi-standards-icon">
+          <i class="bi bi-bookmark-check"></i>
+        </div>
+        <h4 class="rbi-standards-heading">Ethical Incentives</h4>
+        <p class="rbi-standards-text">
+          Recovery targets and incentives are structured to avoid any uncivilized, unlawful, or intimidatory practices, ensuring ethical recovery operations.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Learn More Button -->
+    <div class="rbi-standards-footer">
+      <a href="{% url 'compliances' %}" class="rbi-standards-btn">Learn More About Our Compliance</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Credit Wellness & Debt Awareness Section -->
+<section id="credit-wellness" class="credit-wellness-area py-5">
+  <div class="credit-wellness-container" data-aos="fade-up">
+
+    <div class="credit-wellness-header text-center mb-5">
+      <h2 class="credit-wellness-title fw-bold">Understanding <span class="text-primary">Bad Debt & Credit Health</span></h2>
+      <p class="credit-wellness-subtitle">Maintaining a good credit history is essential for financial stability and accessing future credit facilities. Learn how bad debt affects your financial life.</p>
+    </div>
+
+    <div class="credit-wellness-grid row gy-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="credit-wellness-card p-4 text-center">
+          <div class="credit-wellness-icon text-danger">
+            <i class="bi bi-exclamation-triangle"></i>
+          </div>
+          <h4 class="credit-wellness-heading">What is Bad Debt?</h4>
+          <p class="credit-wellness-text">Bad debt arises when borrowers fail to repay loans or credit on time. Unpaid dues accumulate as non-performing assets (NPAs), affecting both the lender and borrower.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="credit-wellness-card p-4 text-center">
+          <div class="credit-wellness-icon text-warning">
+            <i class="bi bi-credit-card-2-front"></i>
+          </div>
+          <h4 class="credit-wellness-heading">Impact on Credit History</h4>
+          <p class="credit-wellness-text">Unpaid loans or defaults negatively impact your credit score. Lower credit scores reduce eligibility for new loans, higher credit card limits, and favorable interest rates.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="credit-wellness-card p-4 text-center">
+          <div class="credit-wellness-icon text-primary">
+            <i class="bi bi-graph-down-arrow"></i>
+          </div>
+          <h4 class="credit-wellness-heading">Why It Matters to Maintain Credit</h4>
+          <p class="credit-wellness-text">Maintaining timely repayments builds a strong credit profile, ensures better borrowing terms, and prevents long-term financial stress or legal complications.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="credit-wellness-card p-4 text-center">
+          <div class="credit-wellness-icon text-success">
+            <i class="bi bi-lightbulb"></i>
+          </div>
+          <h4 class="credit-wellness-heading">How to Avoid Bad Debt</h4>
+          <p class="credit-wellness-text">Plan your finances, set repayment reminders, prioritize high-interest loans, and maintain open communication with lenders in case of delays to avoid defaults.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="credit-wellness-card p-4 text-center">
+          <div class="credit-wellness-icon text-indigo">
+            <i class="bi bi-people"></i>
+          </div>
+          <h4 class="credit-wellness-heading">Role of Credit Counsellors</h4>
+          <p class="credit-wellness-text">Professional credit counsellors guide borrowers on debt management strategies, timely repayments, and improving credit scores for financial stability.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="credit-wellness-footer text-center mt-5">
+      <a href="#contact" class="credit-wellness-btn">Get Expert Credit Guidance</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Contact / Inquiry Section -->
+<section id="contact" class="contact section py-5 bg-light">
+  <div class="container" data-aos="fade-up">
+
+   
+<!-- Contact Section -->
+<section id="contact" class="contact section py-5" 
+         style="background: linear-gradient(135deg, #f8f9fa, #eef3f7);">
+  <div class="container" data-aos="fade-up">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 style="font-weight: 700; font-size: 2.2rem;">
+        Get in <span style="color: #0d6efd;">Touch With Us</span>
+      </h2>
+      <p style="max-width: 700px; margin: 0 auto; color: #6c757d;">
+        We’d love to connect with you. Whether you have a query, business proposal, 
+        or require support — our team is here to assist you.
+      </p>
+    </div>
+
+    <div class="row gy-4">
+
+      <!-- Contact Info Card -->
+      <div class="col-lg-5" data-aos="fade-right" data-aos-delay="150">
+        <div style="
+          background: rgba(255,255,255,0.9);
+          border-radius: 15px;
+          padding: 30px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+          backdrop-filter: blur(6px);
+        ">
+          <!-- Address -->
+          <div style="display: flex; margin-bottom: 25px;">
+            <i class="bi bi-geo-alt-fill" style="font-size: 1.8rem; color:#0d6efd; margin-right: 15px;"></i>
+            <div>
+              <h5 style="font-weight:600; margin:0;">Head Office</h5>
+              <p style="margin:5px 0;">JB/6, 1st Floor, Plot No. 74/666,<br>Jagda, Sundergarh,<br>Koida, Odisha, India - 769042</p>
+            </div>
+          </div>
+
+          <!-- Phone -->
+          <div style="display: flex; margin-bottom: 25px;">
+            <i class="bi bi-telephone-fill" style="font-size:1.6rem; color:#0d6efd; margin-right:15px;"></i>
+            <div>
+              <h5 style="font-weight:600; margin:0;">Call Us</h5>
+              <p style="margin:5px 0;">+91 78270 39818<br>Mon–Sat | 9:30 AM – 6:30 PM</p>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div style="display: flex; margin-bottom: 25px;">
+            <i class="bi bi-envelope-fill" style="font-size:1.6rem; color:#0d6efd; margin-right:15px;"></i>
+            <div>
+              <h5 style="font-weight:600; margin:0;">Email Us</h5>
+              <p style="margin:5px 0;">Finance@synergipro.in<br>support@synergipro.in</p>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div style="border-radius: 12px; overflow: hidden;">
+            <iframe 
+              src="https://www.google.com/maps?q=SynergiPro%20BPO%20Solutions%20Pvt%20Ltd%20Jagda%20Odisha&output=embed"
+              width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-7" data-aos="fade-left" data-aos-delay="200">
+        <div style="
+          background: #ffffff;
+          border-radius: 15px;
+          padding: 30px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        ">
+          <h4 style="font-weight:600; margin-bottom: 20px;">Send Us a Message</h4>
+          {% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-success" style="border-radius:10px;">{{ message }}</div>
+  {% endfor %}
+{% endif %}
+
+          <form action="/contact/" method="post">
+            {% csrf_token %}
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Your Name" 
+                       style="border-radius:10px; padding:10px 15px;" required>
+              </div>
+              <div class="col-md-6">
+                <input type="email" name="email" class="form-control" placeholder="Your Email"
+                       style="border-radius:10px; padding:10px 15px;" required>
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <input type="text" name="subject" class="form-control" placeholder="Subject"
+                     style="border-radius:10px; padding:10px 15px;" required>
+            </div>
+
+            <div class="mt-3">
+              <textarea name="message" class="form-control" rows="6" placeholder="Your Message"
+                        style="border-radius:10px; padding:12px 15px;" required></textarea>
+            </div>
+
+            <div class="mt-4 text-end">
+              <button type="submit" 
+                      style="background:#0d6efd; color:#fff; border:none; padding:12px 30px; 
+                             border-radius:10px; font-weight:500; transition:0.3s;">
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  </main>
+</body>
+
+
+{% endblock %} 

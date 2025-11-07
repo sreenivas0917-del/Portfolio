@@ -1,0 +1,1259 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Polished Bootstrap spacing & typography (keeps default look) -->
+<style>
+  /* container width nudge (keeps Bootstrap defaults on small screens) */
+  @media (min-width: 1200px) {
+    .faq .container { max-width: 1100px; }
+  }
+
+  /* Section title & lead text rhythm */
+  .faq .section-header h2 {
+    font-weight: 700;
+    color: #0b2a4a;
+    letter-spacing: 0.2px;
+    margin-bottom: .4rem;
+  }
+  .faq .section-header p {
+    color: #495057;
+    line-height: 1.7;
+    max-width: 860px;
+    margin: .5rem auto 0;
+  }
+
+  /* Keep Bootstrap accordion visuals; just refine spacing/legibility */
+  .faq .accordion .accordion-item {
+    border: 1px solid #e9eef6;
+    border-radius: .5rem;
+    overflow: hidden;
+    margin-bottom: .75rem;
+    background: #fff;
+  }
+  .faq .accordion .accordion-button {
+    padding: 1rem 1.125rem;
+    font-weight: 600;
+    color: #0b2a4a;
+    line-height: 1.25;
+    box-shadow: none;
+  }
+  .faq .accordion .accordion-button:not(.collapsed) {
+    background-color: #f1f6ff;
+    color: #0b2a4a;
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.05);
+  }
+  .faq .accordion .accordion-body {
+    color: #495057;
+    line-height: 1.7;
+    padding: .95rem 1.125rem 1.15rem;
+  }
+
+  /* Smooth open/close feel without changing Bootstrap behavior */
+  .faq .accordion .accordion-collapse {
+    transition: height .25s ease;
+  }
+
+  /* Top hero-like FAQ heading block spacing */
+  #faq > .container > section:first-of-type h2 {
+    margin-bottom: .4rem;
+  }
+  #faq > .container > section:first-of-type p {
+    margin-top: .75rem !important;
+  }
+</style>
+
+<!-- FAQ Section -->
+<section id="faq" class="faq section">
+  <div class="container">
+
+<section style="padding:80px 20px; background:linear-gradient(135deg, #f5f9ff, #e3edff); text-align:center;">
+  <h2 style="font-weight:700; font-size:36px; color:#002b5c;">
+    Frequently Asked <span style="color:#0d6efd;">Questions (FAQs)</span>
+  </h2>
+  <p style="max-width:850px; margin:15px auto; color:#444; font-size:17px; line-height:1.6;">
+    Explore answers to common questions about loan recovery, credit management, RBI compliance, and how to maintain a healthy financial profile. 
+    Our goal is to provide clarity on the recovery process and borrower rights — empowering you with transparent information and confidence at every step.
+  </p>
+</section>
+
+    <!-- FAQ List -->
+    <div class="accordion" id="faqAccordion">
+
+      <!-- FAQ 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+            1. What is the role of recovery agents in banks?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Recovery agents help banks recover dues from borrowers who have defaulted on loans. They operate under strict RBI guidelines to ensure lawful and ethical recovery practices.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            2. How does a default impact my credit score?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Defaulting on loans or credit obligations can negatively affect your credit history, lowering your credit score and impacting your ability to secure future loans.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            3. Can I negotiate repayment with the bank?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, banks often provide restructuring or settlement options to help borrowers repay dues in manageable installments.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            4. What measures ensure fair recovery by agents?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Banks follow RBI guidelines, maintain authorization letters, record calls, and ensure recovery agents are trained to handle cases professionally without harassment.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq5">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+            5. How often can agents contact a borrower?
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Agents must follow RBI regulations regarding calling hours and frequency to ensure borrowers are not harassed or intimidated.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 6 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq6">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+            6. What is bad debt and its impact on credit history?
+          </button>
+        </h2>
+        <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="faq6" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Bad debt refers to loans or credit that have not been repaid. It affects creditworthiness, lowers credit score, and can limit access to future credit facilities.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 7 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq7">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+            7. What training do recovery agents undergo?
+          </button>
+        </h2>
+        <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="faq7" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Recovery agents are trained to follow ethical guidelines, respect borrower privacy, record calls properly, and adhere to RBI compliance standards.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 8 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq8">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+            8. How does the RBI monitor bank recovery practices?
+          </button>
+        </h2>
+        <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="faq8" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            RBI reviews bank policies, audits recovery processes, and can impose penalties for violations to ensure borrowers are treated fairly.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 9 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq9">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+            9. Can I raise a complaint against a recovery agent?
+          </button>
+        </h2>
+        <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="faq9" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, banks have mechanisms to address grievances. Complaints can also be escalated to RBI if recovery practices are abusive.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 10 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq10">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+            10. Are recovery agents allowed to visit my home?
+          </button>
+        </h2>
+        <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="faq10" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Visits are allowed only with prior notice, proper authorization, and during reasonable hours, following RBI guidelines.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 11 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq11">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+            11. What documents should an agent carry while contacting a borrower?
+          </button>
+        </h2>
+        <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="faq11" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Agents must carry a bank-issued identity card, authorization letter, and contact information to ensure transparency and legitimacy.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 12 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq12">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+            12. Can recovery agents threaten borrowers?
+          </button>
+        </h2>
+        <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="faq12" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            No, any intimidation or abusive behavior is strictly prohibited under RBI guidelines. Banks are responsible for their agents’ actions.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 13 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq13">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+            13. How can I check my credit history?
+          </button>
+        </h2>
+        <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="faq13" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Credit history can be checked through authorized credit bureaus like CIBIL, Experian, or Equifax by submitting a formal request online.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 14 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq14">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+            14. What is the DPD (Days Past Due) and why is it important?
+          </button>
+        </h2>
+        <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="faq14" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            DPD indicates the number of days a loan payment is overdue. It is critical in determining creditworthiness and risk for banks and lenders.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 15 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq15">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+            15. Can banks charge extra interest on overdue amounts?
+          </button>
+        </h2>
+        <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="faq15" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, banks can levy penal interest or charges on overdue amounts, as specified in the loan agreement and RBI regulations.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 16 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq16">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+            16. How can credit counseling help me?
+          </button>
+        </h2>
+        <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="faq16" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Credit counseling can guide borrowers to manage debts, plan repayments, and maintain good credit standing while avoiding legal complications.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 17 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq17">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+            17. What is the legal framework for repossession?
+          </button>
+        </h2>
+        <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="faq17" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Banks can repossess secured assets only through legal methods outlined under SARFAESI Act, Indian Contract Act, and related RBI regulations.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 18 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq18">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+            18. What are Lok Adalats and how do they help in loan recovery?
+          </button>
+        </h2>
+        <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="faq18" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Lok Adalats are forums for speedy resolution of small loans (usually below Rs. 10 lakh). They provide a low-cost, amicable settlement option.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 19 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq19">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+            19. Can a co-borrower be contacted by recovery agents?
+          </button>
+        </h2>
+        <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="faq19" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, co-borrowers may be contacted as they are equally liable for loan repayment, but the interaction must follow RBI guidelines.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 20 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq20">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+            20. What is the difference between secured and unsecured loans?
+          </button>
+        </h2>
+        <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="faq20" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Secured loans are backed by collateral, while unsecured loans are not. Collateral reduces risk for lenders and may affect recovery procedures.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 21 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq21">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+            21. How does a 90+ DPD affect my credit report?
+          </button>
+        </h2>
+        <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="faq21" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            A 90+ DPD marks the account as severely delinquent, lowering your credit score and signaling higher risk to future lenders.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 22 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq22">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+            22. Can banks charge late fees for overdue EMIs?
+          </button>
+        </h2>
+        <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="faq22" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, late payment fees are allowed as per the loan agreement and RBI guidelines, but they must be communicated transparently.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 23 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq23">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+            23. How can I request a settlement of my loan?
+          </button>
+        </h2>
+        <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="faq23" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Borrowers can approach banks with a formal request for settlement. Banks may offer one-time settlement options under RBI-approved policies.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 24 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq24">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+            24. What happens if a borrower files a frivolous complaint?
+          </button>
+        </h2>
+        <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="faq24" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Banks may continue recovery proceedings after verifying that the complaint is frivolous, with documented proof, following RBI rules.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 25 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq25">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+            25. How can I know which recovery agent is assigned to my case?
+          </button>
+        </h2>
+        <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="faq25" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Banks are required to inform borrowers about recovery agents, provide contact numbers, and display agent details on their official website.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 26 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq26">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+            26. Can I request a no-contact period with agents?
+          </button>
+        </h2>
+        <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="faq26" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Borrowers can request banks to limit agent contact, especially if already in dispute or undergoing negotiation.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 27 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq27">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+            27. Are recovery calls recorded?
+          </button>
+        </h2>
+        <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="faq27" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, banks maintain recordings of recovery calls to ensure compliance and protect both parties.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 28 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq28">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+            28. How does loan restructuring work?
+          </button>
+        </h2>
+        <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="faq28" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Restructuring involves revising loan terms such as EMI, tenure, or interest rate to make repayment feasible for the borrower.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 29 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq29">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
+            29. Can banks impose penalties beyond the contract?
+          </button>
+        </h2>
+        <div id="collapse29" class="accordion-collapse collapse" aria-labelledby="faq29" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            No, banks cannot charge penalties outside the loan agreement and must adhere to RBI regulations.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 30 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq30">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse30" aria-expanded="false" aria-controls="collapse30">
+            30. What is the role of RBI in consumer protection?
+          </button>
+        </h2>
+        <div id="collapse30" class="accordion-collapse collapse" aria-labelledby="faq30" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            RBI protects consumers by issuing guidelines for fair recovery practices, grievance redressal, and overseeing banks’ compliance.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 31 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq31">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse31" aria-expanded="false" aria-controls="collapse31">
+            31. How can I avoid defaulting on loans?
+          </button>
+        </h2>
+        <div id="collapse31" class="accordion-collapse collapse" aria-labelledby="faq31" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Maintain timely payments, track EMIs, communicate with banks proactively, and avoid over-borrowing to prevent defaults.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 32 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq32">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse32" aria-expanded="false" aria-controls="collapse32">
+            32. What is the difference between DPD 0-30 and 90+?
+          </button>
+        </h2>
+        <div id="collapse32" class="accordion-collapse collapse" aria-labelledby="faq32" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            DPD 0-30 means minor overdue, usually less impact; 90+ DPD indicates severe delinquency and major negative effect on credit history.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 33 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq33">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse33" aria-expanded="false" aria-controls="collapse33">
+            33. Can banks change recovery agents mid-process?
+          </button>
+        </h2>
+        <div id="collapse33" class="accordion-collapse collapse" aria-labelledby="faq33" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, but banks must notify the borrower and ensure the new agent carries proper authorization and identification.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 34 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq34">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse34" aria-expanded="false" aria-controls="collapse34">
+            34. How does loan settlement affect credit history?
+          </button>
+        </h2>
+        <div id="collapse34" class="accordion-collapse collapse" aria-labelledby="faq34" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Settling a loan may still reflect as a partial payment or compromise, affecting the credit score compared to full repayment.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 35 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq35">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse35" aria-expanded="false" aria-controls="collapse35">
+            35. Can bad debt be written off?
+          </button>
+        </h2>
+        <div id="collapse35" class="accordion-collapse collapse" aria-labelledby="faq35" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Banks may write off bad debts for accounting purposes but this does not absolve the borrower from repayment obligations.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 36 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq36">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse36" aria-expanded="false" aria-controls="collapse36">
+            36. How can I dispute errors in my credit report?
+          </button>
+        </h2>
+        <div id="collapse36" class="accordion-collapse collapse" aria-labelledby="faq36" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Contact the credit bureau with documentation of the error; the bureau is required to investigate and correct discrepancies.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 37 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq37">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse37" aria-expanded="false" aria-controls="collapse37">
+            37. What is the process for repossessing property?
+          </button>
+        </h2>
+        <div id="collapse37" class="accordion-collapse collapse" aria-labelledby="faq37" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Repossession must follow SARFAESI Act procedures, including notices, waiting periods, and lawful auction of the collateral.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 38 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq38">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse38" aria-expanded="false" aria-controls="collapse38">
+            38. How do EMI reminders work?
+          </button>
+        </h2>
+        <div id="collapse38" class="accordion-collapse collapse" aria-labelledby="faq38" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Banks send reminders via SMS, email, or calls before due dates to ensure timely payments and avoid penalties.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 39 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq39">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse39" aria-expanded="false" aria-controls="collapse39">
+            39. Can I request a copy of the recovery agent’s authorization letter?
+          </button>
+        </h2>
+        <div id="collapse39" class="accordion-collapse collapse" aria-labelledby="faq39" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Yes, borrowers have the right to request and verify the agent’s authorization to ensure transparency.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 40 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq40">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse40" aria-expanded="false" aria-controls="collapse40">
+            40. How often should banks review recovery processes?
+          </button>
+        </h2>
+        <div id="collapse40" class="accordion-collapse collapse" aria-labelledby="faq40" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Banks are advised to periodically review recovery mechanisms to improve practices, train agents, and comply with RBI guidelines.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Additional FAQ Section -->
+<section id="faq-2" class="faq section">
+  <div class="container">
+
+    <!-- Section Header -->
+    <div class="section-header" 
+        style="text-align:center; padding:60px 20px; background:linear-gradient(135deg,#f8fbff 0%,#eef3ff 50%,#ffffff 100%); border-radius:20px; box-shadow:0 8px 30px rgba(0,0,0,0.05); font-family:'Poppins', 'Inter', sans-serif;">
+
+      <h2 style="font-size:36px; font-weight:800; color:#002b5c; letter-spacing:1px; margin-bottom:15px; text-transform:uppercase; background:linear-gradient(90deg,#0056ff,#00d4ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+        Frequently Asked Questions - Part 2
+      </h2>
+
+      <p style="font-size:17px; color:#444; max-width:900px; margin:0 auto; line-height:1.8;">
+        Here we answer more queries related to financial management, credit health, loan recovery, and borrower rights to help you stay informed and make better financial decisions.
+      </p>
+    </div>
+
+
+    <!-- FAQ List -->
+    <div class="accordion" id="faqAccordion2">
+
+      <!-- FAQ 41 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq41">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse41" aria-expanded="false" aria-controls="collapse41">
+            41. How can I track my loan repayment history?
+          </button>
+        </h2>
+        <div id="collapse41" class="accordion-collapse collapse" aria-labelledby="faq41" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            You can track your repayment history through bank statements, mobile banking apps, and by requesting a detailed account summary from your lender.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 42 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq42">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse42" aria-expanded="false" aria-controls="collapse42">
+            42. Can I consolidate multiple loans into one EMI?
+          </button>
+        </h2>
+        <div id="collapse42" class="accordion-collapse collapse" aria-labelledby="faq42" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Yes, banks offer loan consolidation options to combine multiple debts into a single EMI, making repayments simpler and potentially reducing interest.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 43 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq43">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse43" aria-expanded="false" aria-controls="collapse43">
+            43. How do missed EMIs affect my CIBIL score?
+          </button>
+        </h2>
+        <div id="collapse43" class="accordion-collapse collapse" aria-labelledby="faq43" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Missed EMIs can lower your credit score significantly, affecting your chances of getting future loans or credit cards at favorable terms.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 44 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq44">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse44" aria-expanded="false" aria-controls="collapse44">
+            44. What is the difference between a loan default and a delay?
+          </button>
+        </h2>
+        <div id="collapse44" class="accordion-collapse collapse" aria-labelledby="faq44" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            A delay is a short-term overdue payment, whereas a default is a prolonged failure to repay, often leading to legal action and negative credit reporting.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 45 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq45">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse45" aria-expanded="false" aria-controls="collapse45">
+            45. How long does negative information stay on my credit report?
+          </button>
+        </h2>
+        <div id="collapse45" class="accordion-collapse collapse" aria-labelledby="faq45" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Typically, defaults and late payments remain on your credit report for up to 7 years, depending on the credit bureau's policies.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 46 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq46">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse46" aria-expanded="false" aria-controls="collapse46">
+            46. Can I prepay my loan without penalty?
+          </button>
+        </h2>
+        <div id="collapse46" class="accordion-collapse collapse" aria-labelledby="faq46" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Many loans allow prepayment, though some may charge a nominal fee. Always check your loan agreement to confirm prepayment terms.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 47 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq47">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse47" aria-expanded="false" aria-controls="collapse47">
+            47. How can I improve my credit score after default?
+          </button>
+        </h2>
+        <div id="collapse47" class="accordion-collapse collapse" aria-labelledby="faq47" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Pay off overdue amounts, maintain timely payments, avoid new debts, and monitor your credit report regularly to gradually improve your score.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 48 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq48">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse48" aria-expanded="false" aria-controls="collapse48">
+            48. What is a credit bureau, and why is it important?
+          </button>
+        </h2>
+        <div id="collapse48" class="accordion-collapse collapse" aria-labelledby="faq48" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Credit bureaus collect credit information from banks and lenders to generate credit reports, which are essential for assessing creditworthiness.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 49 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq49">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse49" aria-expanded="false" aria-controls="collapse49">
+            49. How does a bank verify my income for loan approval?
+          </button>
+        </h2>
+        <div id="collapse49" class="accordion-collapse collapse" aria-labelledby="faq49" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Banks review salary slips, bank statements, tax returns, and employer verification to confirm your income before approving a loan.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 50 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq50">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse50" aria-expanded="false" aria-controls="collapse50">
+            50. Can multiple defaults affect joint account holders?
+          </button>
+        </h2>
+        <div id="collapse50" class="accordion-collapse collapse" aria-labelledby="faq50" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Yes, all joint account holders are equally responsible, and defaults can negatively impact each holder’s credit history.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 51 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq51">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse51" aria-expanded="false" aria-controls="collapse51">
+            51. What is the minimum credit score required for a personal loan?
+          </button>
+        </h2>
+        <div id="collapse51" class="accordion-collapse collapse" aria-labelledby="faq51" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            While requirements vary, most banks prefer a minimum score of 650-700 for personal loans to assess creditworthiness.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 52 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq52">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse52" aria-expanded="false" aria-controls="collapse52">
+            52. Can I request credit report updates if my dues are cleared?
+          </button>
+        </h2>
+        <div id="collapse52" class="accordion-collapse collapse" aria-labelledby="faq52" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Yes, once dues are cleared, you can request the credit bureau to update your report to reflect timely payments or loan closure.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 53 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq53">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse53" aria-expanded="false" aria-controls="collapse53">
+            53. What is the impact of multiple credit inquiries?
+          </button>
+        </h2>
+        <div id="collapse53" class="accordion-collapse collapse" aria-labelledby="faq53" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Multiple inquiries within a short period can lower your credit score slightly, signaling higher risk to lenders.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 54 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq54">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse54" aria-expanded="false" aria-controls="collapse54">
+            54. Can I get a secured loan without collateral?
+          </button>
+        </h2>
+        <div id="collapse54" class="accordion-collapse collapse" aria-labelledby="faq54" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            By definition, secured loans require collateral. Loans without collateral are considered unsecured and usually have higher interest rates.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 55 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq55">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse55" aria-expanded="false" aria-controls="collapse55">
+            55. How does EMIs default affect future loan approvals?
+          </button>
+        </h2>
+        <div id="collapse55" class="accordion-collapse collapse" aria-labelledby="faq55" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Defaults indicate risk, making banks less likely to approve new loans or offering them at higher interest rates.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 56 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq56">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse56" aria-expanded="false" aria-controls="collapse56">
+            56. Can I negotiate interest rates after a default?
+          </button>
+        </h2>
+        <div id="collapse56" class="accordion-collapse collapse" aria-labelledby="faq56" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Some banks may allow negotiation or restructuring, but terms will depend on the borrower’s repayment ability and bank policy.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 57 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq57">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse57" aria-expanded="false" aria-controls="collapse57">
+            57. What is a “written off loan” and its consequences?
+          </button>
+        </h2>
+        <div id="collapse57" class="accordion-collapse collapse" aria-labelledby="faq57" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            A written-off loan is removed from the bank’s books for accounting purposes but the borrower still owes the amount and it impacts the credit report.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 58 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq58">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse58" aria-expanded="false" aria-controls="collapse58">
+            58. Can I dispute agent harassment claims?
+          </button>
+        </h2>
+        <div id="collapse58" class="accordion-collapse collapse" aria-labelledby="faq58" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Yes, complaints can be lodged with the bank and escalated to RBI if agents violate ethical or legal guidelines.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 59 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq59">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse59" aria-expanded="false" aria-controls="collapse59">
+            59. How can I prevent bad debt from affecting my family members?
+          </button>
+        </h2>
+        <div id="collapse59" class="accordion-collapse collapse" aria-labelledby="faq59" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            Avoid co-signing loans recklessly, maintain separate credit obligations, and educate family members about responsible borrowing.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 60 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq60">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse60" aria-expanded="false" aria-controls="collapse60">
+            60. Are SMS and email reminders considered legal notices?
+          </button>
+        </h2>
+        <div id="collapse60" class="accordion-collapse collapse" aria-labelledby="faq60" data-bs-parent="#faqAccordion2">
+          <div class="accordion-body">
+            No, reminders are not legal notices. Formal legal action requires written notice or court order as per RBI and legal guidelines.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Additional FAQ Section -->
+<section id="faq-3" class="faq section">
+  <div class="container">
+
+    <!-- Section Header -->
+<div class="section-header" 
+     style="text-align:center; padding:60px 20px; background:linear-gradient(135deg,#f8fbff 0%,#eef3ff 50%,#ffffff 100%); border-radius:20px; box-shadow:0 8px 30px rgba(0,0,0,0.05); font-family:'Poppins', 'Inter', sans-serif;">
+
+  <h2 style="font-size:36px; font-weight:800; color:#002b5c; letter-spacing:1px; margin-bottom:15px; text-transform:uppercase; background:linear-gradient(90deg,#0056ff,#00d4ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+    Frequently Asked Questions - Part 3
+  </h2>
+
+  <p style="font-size:17px; color:#444; max-width:900px; margin:0 auto; line-height:1.8;">
+    Here are more queries answered to help you understand loan recovery, credit management, and responsible borrowing practices for better financial health.
+  </p>
+</div>
+
+
+    <!-- FAQ List -->
+    <div class="accordion" id="faqAccordion3">
+
+      <!-- FAQ 61 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq61">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse61" aria-expanded="false" aria-controls="collapse61">
+            61. What is the effect of bad debt on a business credit score?
+          </button>
+        </h2>
+        <div id="collapse61" class="accordion-collapse collapse" aria-labelledby="faq61" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Bad debt lowers a business's credit score, making it harder to secure loans, negotiate supplier credit, or attract investors.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 62 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq62">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse62" aria-expanded="false" aria-controls="collapse62">
+            62. Can I recover from multiple loan defaults quickly?
+          </button>
+        </h2>
+        <div id="collapse62" class="accordion-collapse collapse" aria-labelledby="faq62" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Recovery takes time. Prioritize repayments, negotiate settlements, and avoid new debt to gradually restore creditworthiness.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 63 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq63">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse63" aria-expanded="false" aria-controls="collapse63">
+            63. What legal rights do I have if a recovery agent harasses me?
+          </button>
+        </h2>
+        <div id="collapse63" class="accordion-collapse collapse" aria-labelledby="faq63" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            You can lodge a complaint with your bank, escalate to the RBI, or pursue legal action for harassment or unethical practices.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 64 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq64">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse64" aria-expanded="false" aria-controls="collapse64">
+            64. How does a credit freeze affect loan applications?
+          </button>
+        </h2>
+        <div id="collapse64" class="accordion-collapse collapse" aria-labelledby="faq64" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            A credit freeze prevents lenders from accessing your credit report, halting new loan or credit approvals until lifted.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 65 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq65">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse65" aria-expanded="false" aria-controls="collapse65">
+            65. Can I settle a loan partially with the bank?
+          </button>
+        </h2>
+        <div id="collapse65" class="accordion-collapse collapse" aria-labelledby="faq65" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Some banks allow partial settlements, often at a negotiated amount, but it may still impact your credit record.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 66 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq66">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse66" aria-expanded="false" aria-controls="collapse66">
+            66. How can I prevent over-indebtedness?
+          </button>
+        </h2>
+        <div id="collapse66" class="accordion-collapse collapse" aria-labelledby="faq66" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Create a budget, prioritize essential expenses, avoid unnecessary loans, and monitor credit utilization regularly.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 67 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq67">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse67" aria-expanded="false" aria-controls="collapse67">
+            67. What is the difference between secured and unsecured bad debt?
+          </button>
+        </h2>
+        <div id="collapse67" class="accordion-collapse collapse" aria-labelledby="faq67" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Secured debt is backed by collateral; loss affects assets. Unsecured debt has no collateral but still impacts your credit rating.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 68 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq68">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse68" aria-expanded="false" aria-controls="collapse68">
+            68. Can I negotiate interest rates for overdue loans?
+          </button>
+        </h2>
+        <div id="collapse68" class="accordion-collapse collapse" aria-labelledby="faq68" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Some banks may restructure loans or adjust interest rates if you demonstrate repayment capability and negotiate early.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 69 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq69">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse69" aria-expanded="false" aria-controls="collapse69">
+            69. How long does it take to rebuild credit after loan settlement?
+          </button>
+        </h2>
+        <div id="collapse69" class="accordion-collapse collapse" aria-labelledby="faq69" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Depending on repayment behavior, it may take 12–24 months of consistent payments to restore a strong credit score.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 70 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq70">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse70" aria-expanded="false" aria-controls="collapse70">
+            70. What are the RBI guidelines for recovery agents?
+          </button>
+        </h2>
+        <div id="collapse70" class="accordion-collapse collapse" aria-labelledby="faq70" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            RBI mandates ethical behavior, proper identification, and grievance handling for recovery agents, preventing harassment and unlawful collection practices.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 71 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq71">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse71" aria-expanded="false" aria-controls="collapse71">
+            71. Can co-borrowers be penalized for late payments?
+          </button>
+        </h2>
+        <div id="collapse71" class="accordion-collapse collapse" aria-labelledby="faq71" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Yes, all co-borrowers are equally responsible and late payments can negatively affect each individual's credit score.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 72 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq72">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse72" aria-expanded="false" aria-controls="collapse72">
+            72. How do banks prioritize repayment of overdue loans?
+          </button>
+        </h2>
+        <div id="collapse72" class="accordion-collapse collapse" aria-labelledby="faq72" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Banks may prioritize loans based on amount overdue, age of the debt, and internal risk assessments to recover funds efficiently.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 73 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq73">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse73" aria-expanded="false" aria-controls="collapse73">
+            73. Can unpaid EMIs affect future housing loan eligibility?
+          </button>
+        </h2>
+        <div id="collapse73" class="accordion-collapse collapse" aria-labelledby="faq73" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Yes, banks may reject housing loan applications or offer higher interest rates if past EMIs remain unpaid or defaults exist.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 74 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq74">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse74" aria-expanded="false" aria-controls="collapse74">
+            74. How can I verify my recovery agent’s credentials?
+          </button>
+        </h2>
+        <div id="collapse74" class="accordion-collapse collapse" aria-labelledby="faq74" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Banks provide agent identification, authorization letters, and contact numbers to borrowers to ensure transparency and verification.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 75 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq75">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse75" aria-expanded="false" aria-controls="collapse75">
+            75. What is a secured credit card and how does it help rebuild credit?
+          </button>
+        </h2>
+        <div id="collapse75" class="accordion-collapse collapse" aria-labelledby="faq75" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            A secured credit card requires a fixed deposit as collateral, allowing borrowers to demonstrate timely payments and improve credit score gradually.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 76 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq76">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse76" aria-expanded="false" aria-controls="collapse76">
+            76. Can I opt for EMI rescheduling in case of financial hardship?
+          </button>
+        </h2>
+        <div id="collapse76" class="accordion-collapse collapse" aria-labelledby="faq76" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Banks may offer EMI rescheduling or restructuring after reviewing your financial situation and repayment capacity.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 77 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq77">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse77" aria-expanded="false" aria-controls="collapse77">
+            77. How does debt-to-income ratio affect credit approvals?
+          </button>
+        </h2>
+        <div id="collapse77" class="accordion-collapse collapse" aria-labelledby="faq77" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            A high debt-to-income ratio indicates over-indebtedness, lowering the chances of loan approvals and favorable interest rates.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 78 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq78">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse78" aria-expanded="false" aria-controls="collapse78">
+            78. Can I transfer my loan to another bank for better terms?
+          </button>
+        </h2>
+        <div id="collapse78" class="accordion-collapse collapse" aria-labelledby="faq78" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Yes, balance transfer allows you to move an existing loan to another bank, often at lower interest rates, improving affordability.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 79 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq79">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse79" aria-expanded="false" aria-controls="collapse79">
+            79. What is the role of credit counselling in loan recovery?
+          </button>
+        </h2>
+        <div id="collapse79" class="accordion-collapse collapse" aria-labelledby="faq79" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Credit counsellors guide borrowers on repayment strategies, negotiate with banks, and provide financial planning advice to avoid defaults.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 80 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq80">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse80" aria-expanded="false" aria-controls="collapse80">
+            80. How often should I check my credit report?
+          </button>
+        </h2>
+        <div id="collapse80" class="accordion-collapse collapse" aria-labelledby="faq80" data-bs-parent="#faqAccordion3">
+          <div class="accordion-body">
+            Checking your credit report quarterly helps track repayment behavior, detect errors, and take corrective actions to maintain good credit health.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock %}

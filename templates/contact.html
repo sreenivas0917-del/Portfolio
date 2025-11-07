@@ -1,0 +1,155 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block content %}
+
+<main class="main">
+
+<!-- Contact Page Section -->
+<section style="padding:80px 20px; background:linear-gradient(135deg, #f5f9ff, #e3edff); font-family:'Inter',sans-serif;">
+
+  <!-- Page Title -->
+  <div style="max-width:1200px; margin:0 auto; text-align:center;">
+    <h1 style="font-weight:700; font-size:38px; color:#002b5c; margin-bottom:15px;">
+      Get in Touch with <span style="color:#0d6efd;">SynergiPro BPO Solutions Pvt. Ltd.</span>
+    </h1>
+    <p style="max-width:850px; margin:0 auto 25px; color:#444; font-size:17px; line-height:1.6;">
+      We’re always here to listen, assist, and collaborate. Whether you’re looking for career opportunities, business partnerships, or customer support — our team is ready to help you every step of the way.
+    </p>
+  </div>
+
+  <!-- Contact CTA Button -->
+  <div style="text-align:center; margin-top:50px;">
+    <a href="#contact-form" style="display:inline-block; padding:14px 35px; border-radius:30px; background:#0d6efd; color:#fff; font-size:16px; text-decoration:none; font-weight:500; transition:0.3s;">
+      Send Us a Message
+    </a>
+  </div>
+
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact section" style="background:linear-gradient(135deg,#e8f0ff,#f8fbff); padding:80px 20px; font-family:'Inter',sans-serif;">
+
+
+  <div class="container" style="max-width:1200px; margin:0 auto;">
+
+    <div class="row gy-5 gx-lg-5" style="display:flex; flex-wrap:wrap; gap:40px;">
+
+      <!-- Left Info Section -->
+      <div class="col-lg-4" style="flex:1; min-width:300px;">
+        <div class="info" style="background:#ffffffc9; backdrop-filter:blur(12px); border-radius:20px; box-shadow:0 8px 30px rgba(0,0,0,0.08); padding:35px 25px;">
+          <h3 style="font-weight:700; font-size:26px; color:#002b5c; margin-bottom:10px;">Reach Out to Us</h3>
+          <p style="color:#444; font-size:16px; line-height:1.6; margin-bottom:25px;">
+            Have a question about our services, job openings, partnerships, or need support? We’re here to help!
+          </p>
+
+          <!-- Info Items -->
+          <div class="info-item d-flex" style="display:flex; align-items:flex-start; margin-bottom:18px;">
+            <i class="bi bi-geo-alt flex-shrink-0" style="font-size:24px; color:#0d6efd; margin-right:12px;"></i>
+            <div>
+              <h4 style="font-size:17px; color:#002b5c; margin-bottom:5px;">Head Office Address</h4>
+              <p style="margin:0; color:#555;">Jb/6, 1st Floor, Plot No.74/666,<br>Jagda, Sundergarh,<br>Koida, Odisha, India - 769042</p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex" style="display:flex; align-items:flex-start; margin-bottom:18px;">
+            <i class="bi bi-envelope flex-shrink-0" style="font-size:24px; color:#0d6efd; margin-right:12px;"></i>
+            <div>
+              <h4 style="font-size:17px; color:#002b5c; margin-bottom:5px;">Email Us</h4>
+              <p style="margin:0; color:#555;">
+                📩 HR & Careers: <a href="mailto:hr@synergipro.com" style="color:#0d6efd; text-decoration:none;">hr@synergipro.com</a><br>
+                📩 Business: <a href="mailto:business@synergipro.com" style="color:#0d6efd; text-decoration:none;">business@synergipro.com</a><br>
+                📩 Support: <a href="mailto:support@synergipro.com" style="color:#0d6efd; text-decoration:none;">support@synergipro.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex" style="display:flex; align-items:flex-start; margin-bottom:18px;">
+            <i class="bi bi-telephone flex-shrink-0" style="font-size:24px; color:#0d6efd; margin-right:12px;"></i>
+            <div>
+              <h4 style="font-size:17px; color:#002b5c; margin-bottom:5px;">Call Us</h4>
+              <p style="margin:0; color:#555;">📞 +91 98765 43210<br>📞 +91 87654 32109 (Support)</p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex" style="display:flex; align-items:flex-start; margin-bottom:18px;">
+            <i class="bi bi-clock flex-shrink-0" style="font-size:24px; color:#0d6efd; margin-right:12px;"></i>
+            <div>
+              <h4 style="font-size:17px; color:#002b5c; margin-bottom:5px;">Office Timings</h4>
+              <p style="margin:0; color:#555;">Mon - Sat: 9:30 AM to 6:30 PM<br>Sunday: Closed</p>
+            </div>
+          </div>
+
+          <div class="info-item d-flex" style="display:flex; align-items:flex-start;">
+            <i class="bi bi-whatsapp flex-shrink-0" style="font-size:24px; color:#25d366; margin-right:12px;"></i>
+            <div>
+              <h4 style="font-size:17px; color:#002b5c; margin-bottom:5px;">WhatsApp Support</h4>
+              <p style="margin:0;">
+                <a href="https://wa.me/919876543210" target="_blank" style="color:#0d6efd; text-decoration:none; font-weight:500;">Click to Chat with Us</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-8" style="flex:2; min-width:340px;">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-success" style="border-radius:10px; background:#d1f7d6; color:#1b6e1f; padding:12px 15px; margin-bottom:15px; font-size:15px;">{{ message }}</div>
+          {% endfor %}
+        {% endif %}
+        <form action="/contact-us/" method="post" style="background:#ffffff; border-radius:20px; box-shadow:0 8px 30px rgba(0,0,0,0.08); padding:35px;">
+          {% csrf_token %}
+          <div class="row" style="display:flex; flex-wrap:wrap; gap:20px;">
+            <div class="col-md-6 form-group" style="flex:1; min-width:250px;">
+              <input type="text" name="name" class="form-control" placeholder="Your Name *" required
+              style="width:100%; padding:12px 15px; border:1px solid #ccc; border-radius:10px; font-size:15px; transition:0.3s;">
+            </div>
+            <div class="col-md-6 form-group" style="flex:1; min-width:250px;">
+              <input type="email" class="form-control" name="email" placeholder="Your Email *" required
+              style="width:100%; padding:12px 15px; border:1px solid #ccc; border-radius:10px; font-size:15px; transition:0.3s;">
+            </div>
+          </div>
+
+          <div class="form-group mt-3" style="margin-top:20px;">
+            <input type="text" class="form-control" name="subject" placeholder="Subject *" required
+            style="width:100%; padding:12px 15px; border:1px solid #ccc; border-radius:10px; font-size:15px;">
+          </div>
+
+          <div class="form-group mt-3" style="margin-top:20px;">
+            <textarea class="form-control" name="message" rows="6" placeholder="Your Message *" required
+            style="width:100%; padding:12px 15px; border:1px solid #ccc; border-radius:10px; font-size:15px; resize:none;"></textarea>
+          </div>
+
+          <div class="text-center" style="margin-top:25px;">
+            <button type="submit" 
+              style="background:linear-gradient(135deg,#0d6efd,#0056d2); border:none; color:#fff; padding:14px 35px; font-size:16px; font-weight:600; border-radius:30px; cursor:pointer; transition:all 0.3s;">
+              Send Message
+            </button>
+          </div>
+
+          <p class="mt-3" style="font-size:13px; color:#666; margin-top:20px; line-height:1.6;">
+            <strong>Disclaimer:</strong> SynergiPro BPO Solutions Pvt. Ltd. does not request any fees for job applications or interviews. 
+            All information shared is kept confidential as per our Data Privacy Policy. 
+            For any fraudulent activity, please report to <strong>report@synergipro.com</strong>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+    <!-- Google Maps Embed -->
+  <div class="mb-5" style="border-radius:18px; overflow:hidden; box-shadow:0 6px 20px rgba(0,0,0,0.1);">
+    <iframe 
+      style="width:100%; height:400px; border:0;" 
+      loading="lazy" 
+      allowfullscreen 
+      src="https://www.google.com/maps?q=Jb/6%201st%20Floor,%20Plot%20No.74/666,%20Jagda,%20Sundergarh,%20Koida,%20Odisha%20769042&output=embed">
+    </iframe>
+  </div>
+</section>
+
+</main>
+
+{% endblock %} 

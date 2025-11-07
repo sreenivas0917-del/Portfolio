@@ -1,0 +1,585 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block content %}
+<body class="blog-page">
+
+  <main class="main">
+
+<!-- Page Title -->
+<div class="page-title accent-background" style="padding:80px 20px; background:linear-gradient(135deg, #f5f9ff, #e3edff); text-align:center; border-bottom:1px solid #dbe5ff;">
+  <div class="container d-lg-flex justify-content-between align-items-center flex-column" style="max-width:1000px; margin:0 auto;">
+    
+    <!-- Main Heading -->
+    <h1 class="mb-2 mb-lg-0" style="font-weight:700; font-size:36px; color:#002b5c; margin-bottom:20px;">
+      Explore Insights & Updates from <span style="color:#0d6efd;">SynergiPro Blog</span>
+    </h1>
+
+    <!-- Intro Paragraph -->
+    <p style="max-width:850px; margin:0 auto 20px; color:#444; font-size:17px; line-height:1.6;">
+      Welcome to our official blog — your go-to destination for the latest trends, insights, and expert perspectives 
+      in the BPO and financial service industries. Discover practical advice, success stories, technology innovations, 
+      and company news that help shape careers and empower businesses globally.
+    </p>
+
+    <!-- Extra Section Content -->
+    <p style="max-width:850px; margin:0 auto; color:#555; font-size:16px; line-height:1.6;">
+      Whether you're a professional looking for productivity tips, an organization exploring outsourcing solutions, 
+      or a student curious about industry insights, our blog brings you valuable, data-driven content to stay ahead in the digital era.
+    </p>
+
+    <!-- CTA Button -->
+    <a href="#latest-posts" style="display:inline-block; margin-top:30px; padding:14px 35px; font-size:16px; border-radius:30px; background:#0d6efd; color:#fff; text-decoration:none; font-weight:500; transition:all 0.3s ease;">
+      Read Latest Articles
+    </a>
+
+  </div>
+</div>
+<!-- End Page Title -->
+
+
+<!-- Blog Section (Merged: keeping all 40 items) -->
+<section id="blogs" class="section py-5" style="background: linear-gradient(135deg, #f8fbff, #eef3ff); padding:80px 20px; font-family:'Poppins',sans-serif;">
+  <div class="container" style="max-width:1200px; margin:auto;">
+
+    <!-- Anchor target for CTA -->
+    <div id="latest-posts"></div>
+
+    <!-- Heading Group 1 -->
+    <div class="text-center mb-5" style="max-width:700px; margin:auto;">
+      <h2 style="font-weight:700; font-size:38px; color:#002b5e; margin-bottom:10px;">Latest Insights & Articles</h2>
+      <p style="color:#5a6b85; font-size:16px;">Stay informed with expert insights on financial management, BPO strategies, automation, and business growth.</p>
+      <div style="width:60px; height:4px; background:linear-gradient(90deg,#0056d2,#00bcd4); border-radius:5px; margin:20px auto;"></div>
+    </div>
+
+    <div class="row gy-5" style="display:flex; flex-wrap:wrap; justify-content:center; gap:30px; align-items:stretch;">
+
+      <!-- Removed empty loop that did nothing
+      {% for blog in blogs %}
+      {% endfor %}
+      -->
+
+      <!-- Blog Item 1 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.8); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/1.jpg' %}" class="img-fluid" alt="Blog 1" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href="blog-details.html" style="text-decoration:none; color:inherit;">Top 10 Strategies for Effective Loan Recovery</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Discover proven strategies to enhance loan recovery efficiency, reduce defaults, and improve client satisfaction in financial services.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">October 24, 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Item 2 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.8); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/2.jpg' %}" class="img-fluid" alt="Blog 2" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href="blog-details.html" style="text-decoration:none; color:inherit;">Customer Support Best Practices in BPO</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Learn how to provide superior customer support using modern tools, training, and analytics to maximize client satisfaction.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">October 20, 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Item 3 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.8); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/3.jpg' %}" class="img-fluid" alt="Blog 3" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href="blog-details.html" style="text-decoration:none; color:inherit;">Leveraging Data Analytics for Business Growth</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Explore how BPO companies can use analytics to generate actionable insights, improve operations, and boost revenue.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">October 18, 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Item 4 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.8); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/4.jpg' %}" class="img-fluid" alt="Blog 4" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href="blog-details.html" style="text-decoration:none; color:inherit;">The Role of Automation in BPO Services</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Discover how automation streamlines operations, reduces errors, and enhances efficiency in BPO environments.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">October 15, 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Item 5 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.8); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/5.jpg' %}" class="img-fluid" alt="Blog 5" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href="blog-details.html" style="text-decoration:none; color:inherit;">Top Challenges in Loan Recovery & How to Overcome Them</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Learn about common hurdles in loan recovery processes and strategies to overcome them effectively for financial institutions.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">October 10, 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Item 6 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.8); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/6.jpg' %}" class="img-fluid" alt="Blog 6" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href="blog-details.html" style="text-decoration:none; color:inherit;">Enhancing Customer Experience through Multichannel Support</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Understand how integrating multiple support channels boosts customer satisfaction and operational efficiency.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">October 5, 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Item 7 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.8); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/7.jpg' %}" class="img-fluid" alt="Blog 7" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href="blog-details.html" style="text-decoration:none; color:inherit;">Data Security in BPO: Best Practices</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Explore essential data security measures to protect sensitive client information and maintain regulatory compliance.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">October 1, 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Item 8 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.8); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/8.jpg' %}" class="img-fluid" alt="Blog 8" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href="blog-details.html" style="text-decoration:none; color:inherit;">Effective Employee Training Programs for BPO</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Learn how structured training programs improve employee performance, service quality, and customer satisfaction.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">September 28, 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Item 9 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.8); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/9.jpg' %}" class="img-fluid" alt="Blog 9" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href="blog-details.html" style="text-decoration:none; color:inherit;">The Future of BPO: Trends to Watch in 2025</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Stay ahead of the curve by understanding upcoming trends in the BPO industry, including AI, automation, and analytics.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">September 25, 2025</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Blog Item 10 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.8); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/10.jpg' %}" class="img-fluid" alt="Blog 10" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href="blog-details.html" style="text-decoration:none; color:inherit;">Maximizing ROI in Customer Support Outsourcing</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Discover actionable tips and strategies to achieve higher returns while outsourcing your customer support operations.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">September 20, 2025</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Blog Item 11 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/11.jpg' %}" class="img-fluid" alt="Blog 11" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Optimizing Call Center Operations with AI</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Explore AI tools to reduce wait times, automate repetitive tasks, and improve overall customer satisfaction.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">September 18, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 12 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/12.jpg' %}" class="img-fluid" alt="Blog 12" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>The Importance of Compliance in Loan Recovery</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Understand the legal framework and best practices for ensuring regulatory compliance in debt collection.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">September 15, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 13 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/13.jpg' %}" class="img-fluid" alt="Blog 13" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>How Outsourcing Can Cut Operational Costs</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Learn how BPO services can significantly reduce business costs while maintaining quality and efficiency.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">September 12, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 14 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/14.jpg' %}" class="img-fluid" alt="Blog 14" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Data-Driven Decisions in Customer Support</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Utilize analytics to make informed decisions that enhance customer satisfaction and operational performance.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">September 10, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 15 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/15.jpg' %}" class="img-fluid" alt="Blog 15" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Using Chatbots for Efficient Customer Query Handling</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Explore how chatbots can provide instant responses and reduce workload on human agents.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">September 8, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 16 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/16.jpg' %}" class="img-fluid" alt="Blog 16" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Effective Techniques for Handling Non-Paying Clients</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Learn actionable strategies for managing clients who delay or default on payments, while maintaining relationships.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">September 5, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 17 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/17.jpg' %}" class="img-fluid" alt="Blog 17" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Cloud Solutions for BPO Companies</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Discover how cloud technology improves flexibility, reduces infrastructure costs, and enables seamless operations.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">September 3, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 18 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/18.jpg' %}" class="img-fluid" alt="Blog 18" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Importance of Feedback Loops in Customer Service</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Learn how collecting and analyzing feedback improves service quality and enhances client satisfaction.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">September 1, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 19 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/19.jpg' %}" class="img-fluid" alt="Blog 19" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Handling High Call Volumes Efficiently</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Discover techniques and tools for managing high volumes of calls without compromising service quality.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">August 28, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 20 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/20.jpg' %}" class="img-fluid" alt="Blog 20" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Using CRM Tools to Boost Recovery Rates</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Explore how Customer Relationship Management tools can help track clients and improve loan recovery efficiency.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">August 25, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 21 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/21.jpg' %}" class="img-fluid" alt="Blog 21" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Best Practices for Multilingual Customer Support</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Learn how to serve clients in multiple languages to expand your business and improve satisfaction rates.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">August 22, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 22 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/22.jpg' %}" class="img-fluid" alt="Blog 22" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>How Outsourced Analytics Improves Decision Making</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Understand how outsourcing analytics to experts can provide actionable insights for better business performance.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">August 20, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 23 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/23.jpg' %}" class="img-fluid" alt="Blog 23" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Implementing Performance Metrics in BPO</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Learn which metrics to track and how performance tracking improves efficiency and client satisfaction.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">August 18, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 24 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/24.jpg' %}" class="img-fluid" alt="Blog 24" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Tips for Maintaining Data Privacy in BPO</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Discover strategies and best practices for keeping sensitive customer data secure and compliant with regulations.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">August 15, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 25 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/25.jpg' %}" class="img-fluid" alt="Blog 25" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Advanced Call Routing Techniques</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Optimize call routing to improve response times, customer satisfaction, and operational efficiency.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">August 12, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 26 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/26.jpg' %}" class="img-fluid" alt="Blog 26" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Key Challenges in Outsourcing Customer Service</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Understand common challenges in outsourcing customer service and how to mitigate them effectively.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">August 10, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 27 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/27.jpg' %}" class="img-fluid" alt="Blog 27" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Improving Employee Retention in BPO Companies</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Learn strategies to reduce turnover, improve job satisfaction, and retain top talent in BPO companies.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">August 8, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 28 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/28.jpg' %}" class="img-fluid" alt="Blog 28" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>How Predictive Analytics Improves Recovery Rates</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Discover how predictive models help identify high-risk borrowers, automate follow-ups, and increase loan recovery efficiency.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">August 5, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 29 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/29.jpg' %}" class="img-fluid" alt="Blog 29" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Call Quality Monitoring: Why It Matters</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Understand how monitoring call quality helps ensure professionalism, compliance, and higher customer satisfaction.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">August 2, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 30 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/30.jpg' %}" class="img-fluid" alt="Blog 30" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>How to Improve First Call Resolution (FCR)</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Effective techniques to resolve customer issues on the first interaction, reducing repeat calls and increasing satisfaction.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">July 30, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 31 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/31.jpg' %}" class="img-fluid" alt="Blog 31" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Role of Emotional Intelligence in Customer Service</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Learn why empathy and emotional intelligence are crucial for excellent customer service and client retention.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">July 28, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 32 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/32.jpg' %}" class="img-fluid" alt="Blog 32" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>How to Create an Effective Debt Collection Script</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Step-by-step guide to creating professional, compliant, and assertive scripts for loan recovery agents.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">July 25, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 33 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/33.jpg' %}" class="img-fluid" alt="Blog 33" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Gamification in BPO Training Programs</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Discover how gamification boosts employee engagement, performance, and retention in training programs.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">July 22, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 34 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/34.jpg' %}" class="img-fluid" alt="Blog 34" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>How Voice Analytics Transforms Call Centers</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Learn how voice analytics can detect emotions, measure satisfaction, and improve customer interactions.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">July 20, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 35 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/35.jpg' %}" class="img-fluid" alt="Blog 35" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Digital Payment Tools in Loan Recovery</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Understand how UPI, payment gateways, and auto-debit systems improve collection efficiency.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">July 18, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 36 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/36.jpg' %}" class="img-fluid" alt="Blog 36" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>How to Manage Remote Call Center Teams</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Explore tools and strategies for monitoring, training, and motivating remote support teams.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">July 15, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 37 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/37.jpg' %}" class="img-fluid" alt="Blog 37" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Why BPOs Should Invest in Cybersecurity</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Understand the risks of cyberattacks and how to implement strong cybersecurity measures in BPO environments.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">July 12, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 38 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/38.jpg' %}" class="img-fluid" alt="Blog 38" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Reducing Call Abandonment Rates</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Discover key strategies to minimize call drop rates and improve customer trust in call centers.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">July 10, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 39 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/39.jpg' %}" class="img-fluid" alt="Blog 39" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>How to Create a Customer-Centric BPO Culture</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Learn how to align employees, policies, and technology to build a customer-first service culture.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">July 8, 2025</span>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Blog Item 40 -->
+      <div class="col-lg-4 col-md-6" style="flex:1 1 300px; max-width:360px; display:flex;">
+        <div class="blog-item" style="display:flex; flex-direction:column; justify-content:space-between; background:rgba(255,255,255,0.85); backdrop-filter:blur(10px); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,0.08); overflow:hidden; transition:all 0.4s ease; width:100%;">
+          <img src="{% static 'blog/40.jpg' %}" class="img-fluid" alt="Blog 40" style="width:100%; height:220px; object-fit:cover; transition:all 0.4s ease;">
+          <div class="p-4" style="padding:25px; flex:1;">
+            <h3 style="font-size:20px; font-weight:600; color:#002b5e; margin-bottom:10px;"><a href='blog-details.html' style='text-decoration:none; color:inherit;'>Future of Loan Recovery: AI, Automation & Beyond</a></h3>
+            <p style="color:#5a6b85; font-size:15px; line-height:1.6;">Explore how AI, machine learning, predictive analytics, and automated reminders will shape the future of debt recovery.</p>
+            <span style="font-size:14px; color:#0078d4; font-weight:500;">July 5, 2025</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Hover Effects CSS (kept; no scroll-based visibility animations) -->
+<style>
+  #blogs .blog-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #blogs .blog-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 100, 200, 0.15);
+  }
+  #blogs .blog-item:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  #blogs .blog-item:hover h3 a {
+    color: #0056d2;
+  }
+  /* Fixed selector: apply padding tweaks to the section itself on mobile */
+  @media (max-width: 768px) {
+    #blogs {
+      padding: 60px 15px !important;
+    }
+    #blogs .blog-item {
+      margin-bottom: 30px;
+      height: auto;
+    }
+    #blogs h2 {
+      font-size: 28px !important;
+    }
+  }
+</style>
+
+  </main>
+
+</body>
+
+
+{% endblock %}

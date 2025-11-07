@@ -1,0 +1,259 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block content %}
+
+
+
+<!-- Top Bar -->
+<div style="background:#0d1b2a;color:#e0e1dd;padding:8px 60px;font-size:14px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.1);">
+    <div>📍 Pan India | ISO 9001:2015 Certified | RBI Compliant</div>
+    <div>
+        📞 +91 98765 43210 &nbsp; | &nbsp; ✉ support@loanrecoverypro.com
+    </div>
+</div>
+
+<!-- Header -->
+<header style="background:linear-gradient(135deg,#022b3a,#1f7a8c);color:white;text-align:center;padding:70px 20px;">
+    <h1 style="margin:0;font-size:44px;font-weight:800;letter-spacing:0.5px;">Professional Loan Recovery & Debt Management</h1>
+    <p style="font-size:19px;margin-top:12px;opacity:0.95;max-width:800px;margin-left:auto;margin-right:auto;">
+        Helping Banks, NBFCs, FinTechs & Corporates reduce NPAs with ethical recovery,
+        legal compliance and AI-powered tracking systems.
+    </p>
+    <button onclick="document.getElementById('faq').scrollIntoView({behavior:'smooth'})"
+        style="margin-top:25px;padding:13px 32px;background:#ffffff;color:#022b3a;border:none;border-radius:25px;font-size:16px;font-weight:600;cursor:pointer;transition:0.3s;">
+        Explore FAQs
+    </button>
+</header>
+
+<!-- Hero Section -->
+<section style="padding:75px 20px;text-align:center;background:#f3f6fa;">
+    <h2 style="font-size:32px;color:#022b3a;font-weight:700;margin-bottom:12px;">Secure • Technology-Driven • Legally Compliant</h2>
+    <p style="max-width:850px;margin:0 auto;font-size:18px;line-height:1.8;color:#555;">
+        We specialize in end-to-end loan recovery solutions—from early bucket collections to
+        hardcore NPA resolutions. Our operations are backed by data analytics, legal advisors,
+        certified recovery agents, call center infrastructure, doorstep field collections and
+        automated reporting dashboards for real-time tracking.
+    </p>
+
+    <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-top:40px;">
+        <div style="background:#ffffff;padding:20px;width:280px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:left;">
+            <h3 style="font-size:18px;color:#022b3a;font-weight:700;">✔ Pre-Delinquency Alerts</h3>
+            <p style="font-size:15px;color:#555;">Automated reminders via SMS, email, IVR & WhatsApp before DPD begins.</p>
+        </div>
+        <div style="background:#ffffff;padding:20px;width:280px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:left;">
+            <h3 style="font-size:18px;color:#022b3a;font-weight:700;">✔ Field & Legal Recovery</h3>
+            <p style="font-size:15px;color:#555;">On-ground visits, Section 138 notice issuance & collaboration with legal counsel.</p>
+        </div>
+        <div style="background:#ffffff;padding:20px;width:280px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:left;">
+            <h3 style="font-size:18px;color:#022b3a;font-weight:700;">✔ Real-Time Reporting</h3>
+            <p style="font-size:15px;color:#555;">Live dashboards showing recovery status, agent performance & settlement updates.</p>
+        </div>
+    </div>
+
+  <a href="{% url 'AddPage' %}" 
+   style="display:inline-block; margin-top:35px; padding:14px 38px; background:#022b3a; 
+          color:#ffffff; border:none; border-radius:30px; font-size:16px; font-weight:600; 
+          text-decoration:none; cursor:pointer; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  Request a Free Consultation
+</a>
+
+</section>
+<!-- Services -->
+<section style="padding:60px 20px;background:#f7faff;">
+    <h2 style="text-align:center;color:#003366;font-size:32px;font-weight:700;margin-bottom:10px;">Our Core Services</h2>
+    <p style="text-align:center;color:#555;font-size:16px;max-width:700px;margin:0 auto;">
+        We offer comprehensive loan recovery solutions using technology, legal expertise, and ethical strategies tailored for Banks, NBFCs, Fintechs, Corporates, and Microfinance Institutions.
+    </p>
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;margin-top:40px;">
+        
+        <!-- Card -->
+        <div style="width:300px;margin:15px;padding:25px;border:none;border-radius:12px;background:white;box-shadow:0 6px 15px rgba(0,0,0,0.1);transition:all 0.3s ease;cursor:pointer;"
+             onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 10px 20px rgba(0,0,0,0.2)';"
+             onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
+            <h3 style="color:#0056b3;font-size:20px;">📌 Pre-Legal Recovery</h3>
+            <p style="color:#555;font-size:14px;">Automated reminders, payment links, soft follow-up calls, email/SMS follow-ups, and early-stage recovery campaigns to reduce NPAs efficiently.</p>
+        </div>
+
+        <div style="width:300px;margin:15px;padding:25px;border:none;border-radius:12px;background:white;box-shadow:0 6px 15px rgba(0,0,0,0.1);transition:0.3s;cursor:pointer;"
+             onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 10px 20px rgba(0,0,0,0.2)';"
+             onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
+            <h3 style="color:#0056b3;font-size:20px;">⚖ Legal Recovery & Notices</h3>
+            <p style="color:#555;font-size:14px;">Issuing legal notices under Section 138 NI Act, SARFAESI Act, arbitration proceedings, Lok Adalat representations, civil and criminal case filings.</p>
+        </div>
+
+        <div style="width:300px;margin:15px;padding:25px;border:none;border-radius:12px;background:white;box-shadow:0 6px 15px rgba(0,0,0,0.1);transition:0.3s;cursor:pointer;"
+             onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 10px 20px rgba(0,0,0,0.2)';"
+             onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
+            <h3 style="color:#0056b3;font-size:20px;">🚓 Field & On-Ground Collection</h3>
+            <p style="color:#555;font-size:14px;">Doorstep visits, skip tracing, borrower counselling, EMI negotiation, and recovery tracking using GPS-enabled mobile app for field agents.</p>
+        </div>
+
+        <div style="width:300px;margin:15px;padding:25px;border:none;border-radius:12px;background:white;box-shadow:0 6px 15px rgba(0,0,0,0.1);transition:0.3s;cursor:pointer;"
+             onmouseover="this.style.transform='translateY(-10px)';this.style.boxShadow='0 10px 20px rgba(0,0,0,0.2)';"
+             onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 15px rgba(0,0,0,0.1)';">
+            <h3 style="color:#0056b3;font-size:20px;">🏦 Asset Seizure & Auctions</h3>
+            <p style="color:#555;font-size:14px;">Vehicle repossession, property seizure, public auction coordination, bank liaisoning, and post-auction documentation under RBI & legal norms.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section style="background:linear-gradient(135deg,#e3f2fd,#f1f8ff);padding:60px 20px;text-align:center;">
+    <h2 style="color:#003366;font-size:30px;">Our End-to-End Recovery Process</h2>
+    <p style="max-width:740px;color:#555;margin:15px auto;font-size:16px;">Our structured, compliant and tech-enabled process ensures timely and ethical recovery without compromising client reputation.</p>
+    <div style="max-width:1000px;margin:auto;text-align:left;font-size:18px;line-height:1.8;color:#333;">
+        <ol>
+            <li><b>Account Verification:</b> Detailed analysis of loan agreements, outstanding amounts, customer contact validation.</li>
+            <li><b>Soft Recovery (0-30 days PAR):</b> SMS/Email reminders, IVR calls, UPI-based payment links.</li>
+            <li><b>Field Recovery (30-90 days PAR):</b> Trained field executives visit borrower, counsel & negotiate repayment.</li>
+            <li><b>Legal Action (90+ DPD):</b> Legal notices, arbitration, court case filing, SARFAESI proceedings if required.</li>
+            <li><b>Closure & Reporting:</b> Payment collection, NOC issuance, legal withdrawal & MIS report submission.</li>
+        </ol>
+    </div>
+</section>
+<!-- Industries We Serve -->
+<section style="padding:70px 20px;background:#ffffff;">
+    <h2 style="text-align:center;color:#002b5b;font-size:32px;margin-bottom:10px;">Industries We Serve</h2>
+    <p style="text-align:center;color:#555;margin-bottom:40px;font-size:17px;">
+        Our loan recovery and debt management solutions are designed to support diverse industries with sector-specific strategies, legal expertise, and digital tools.
+    </p>
+
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:20px;">
+        <!-- Industry Cards -->
+        <div style="width:280px;padding:20px;text-align:center;border-radius:10px;background:#f7f9fc;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+            <h3 style="color:#0056b3;font-size:20px;">🏦 Banking & NBFCs</h3>
+            <p style="color:#555;font-size:14px;">Retail loans, PL, BL, credit card defaults, SME financing, and secured/unsecured lending recovery.</p>
+        </div>
+
+        <div style="width:280px;padding:20px;text-align:center;border-radius:10px;background:#f7f9fc;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+            <h3 style="color:#0056b3;font-size:20px;">📱 Fintech & App-Based Lenders</h3>
+            <p style="color:#555;font-size:14px;">Digital microloans, BNPL, instant credit, EMI recovery, and delinquent borrower management.</p>
+        </div>
+
+        <div style="width:280px;padding:20px;text-align:center;border-radius:10px;background:#f7f9fc;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+            <h3 style="color:#0056b3;font-size:20px;">🚗 Auto, Home & Gold Loans</h3>
+            <p style="color:#555;font-size:14px;">Vehicle repossession, mortgage recovery, gold loan settlements, and asset auction proceedings.</p>
+        </div>
+
+        <div style="width:280px;padding:20px;text-align:center;border-radius:10px;background:#f7f9fc;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+            <h3 style="color:#0056b3;font-size:20px;">🏢 Corporate & SME Loans</h3>
+            <p style="color:#555;font-size:14px;">Invoice financing defaults, working capital loan recovery, corporate debt restructuring, NPA monitoring.</p>
+        </div>
+
+        <div style="width:280px;padding:20px;text-align:center;border-radius:10px;background:#f7f9fc;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+            <h3 style="color:#0056b3;font-size:20px;">💼 Microfinance & Rural Lending</h3>
+            <p style="color:#555;font-size:14px;">SHG, JLG loans, rural credit, group loan repayment tracking, and door-to-door collections.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section style="background:#f0f6ff;padding:70px 20px;">
+    <h2 style="text-align:center;color:#003366;font-size:30px;margin-bottom:15px;">Why Partner With Us?</h2>
+    <p style="text-align:center;color:#555;margin-bottom:40px;font-size:17px;">
+        Trusted by financial institutions nationwide, our approach focuses on compliance, technology, ethics, and results.
+    </p>
+
+    <div style="max-width:1000px;margin:auto;display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
+        <div style="flex:1;min-width:300px;background:white;padding:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+            <h3 style="color:#0056b3;">✅ Regulatory Compliance</h3>
+            <p style="color:#555;">100% adherence to RBI, Supreme Court, and NBFC guidelines – ensuring no legal or reputational risk to clients.</p>
+        </div>
+        <div style="flex:1;min-width:300px;background:white;padding:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+            <h3 style="color:#0056b3;">✅ Legal & Field Expertise</h3>
+            <p style="color:#555;">Skilled advocates, arbitrators, certified recovery agents, and field officers across 150+ locations.</p>
+        </div>
+        <div style="flex:1;min-width:300px;background:white;padding:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+            <h3 style="color:#0056b3;">✅ AI-Driven Recovery</h3>
+            <p style="color:#555;">Real-time dashboards, predictive analytics, skip tracing tools, GPS tracking, call recordings, and automated MIS reports.</p>
+        </div>
+        <div style="flex:1;min-width:300px;background:white;padding:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+            <h3 style="color:#0056b3;">✅ Ethical & Customer-Centric</h3>
+            <p style="color:#555;">Zero harassment policy, confidential operations, respectful borrower communication, and brand-friendly collection practices.</p>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" style="padding:80px 20px;background:#f8fbff;">
+    <h2 style="text-align:center;color:#002855;font-size:32px;font-weight:700;margin-bottom:15px;">
+        Frequently Asked Questions
+    </h2>
+    <p style="text-align:center;color:#555;font-size:16px;margin-bottom:40px;max-width:700px;margin-left:auto;margin-right:auto;">
+        Find answers to common questions regarding our loan recovery process, compliance, data protection and service timelines.
+    </p>
+
+    <div style="max-width:900px;margin:auto;">
+        
+        <!-- FAQ Item -->
+        <div class="faq-item" style="margin-bottom:15px;border:1px solid #dce3f0;border-radius:8px;overflow:hidden;background:#ffffff;box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+            <button onclick="toggleFAQ(this)" style="width:100%;text-align:left;padding:18px;border:none;background:#ffffff;font-size:17px;color:#003366;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                Is your recovery process legal and RBI compliant?
+                <span style="font-size:20px;color:#0056b3;">+</span>
+            </button>
+            <div style="display:none;padding:15px 20px;color:#555;font-size:15px;border-top:1px solid #e0e6f1;">
+                Yes. All recovery procedures adhere to RBI, SARFAESI Act, Supreme Court guidelines, and ethical collection standards. We ensure zero harassment and full legal compliance.
+            </div>
+        </div>
+
+        <!-- FAQ Item -->
+        <div class="faq-item" style="margin-bottom:15px;border:1px solid #dce3f0;border-radius:8px;overflow:hidden;background:#ffffff;box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+            <button onclick="toggleFAQ(this)" style="width:100%;text-align:left;padding:18px;border:none;background:#ffffff;font-size:17px;color:#003366;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                How soon can recovery actions begin?
+                <span style="font-size:20px;color:#0056b3;">+</span>
+            </button>
+            <div style="display:none;padding:15px 20px;color:#555;font-size:15px;border-top:1px solid #e0e6f1;">
+                Recovery begins within 24–48 hours after KYC verification, mandate approval, and borrower account validation.
+            </div>
+        </div>
+
+        <!-- FAQ Item -->
+        <div class="faq-item" style="margin-bottom:15px;border:1px solid #dce3f0;border-radius:8px;overflow:hidden;background:#ffffff;box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+            <button onclick="toggleFAQ(this)" style="width:100%;text-align:left;padding:18px;border:none;background:#ffffff;font-size:17px;color:#003366;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                Do you recover both secured and unsecured loans?
+                <span style="font-size:20px;color:#0056b3;">+</span>
+            </button>
+            <div style="display:none;padding:15px 20px;color:#555;font-size:15px;border-top:1px solid #e0e6f1;">
+                Yes. We handle secured loans (vehicle, gold, mortgage, MSME) and unsecured loans (personal, credit card, BNPL, fintech lending).
+            </div>
+        </div>
+
+        <!-- FAQ Item -->
+        <div class="faq-item" style="margin-bottom:15px;border:1px solid #dce3f0;border-radius:8px;overflow:hidden;background:#ffffff;box-shadow:0 4px 8px rgba(0,0,0,0.05);">
+            <button onclick="toggleFAQ(this)" style="width:100%;text-align:left;padding:18px;border:none;background:#ffffff;font-size:17px;color:#003366;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+                How is borrower data kept secure and confidential?
+                <span style="font-size:20px;color:#0056b3;">+</span>
+            </button>
+            <div style="display:none;padding:15px 20px;color:#555;font-size:15px;border-top:1px solid #e0e6f1;">
+                We use AES-256 encryption, NDA-bound processes, GDPR compliance, and secured access protocols to ensure data privacy and confidentiality.
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Accordion Script -->
+<script>
+function toggleFAQ(button) {
+    var content = button.nextElementSibling;
+    var icon = button.querySelector("span");
+
+    if (content.style.display === "block") {
+        content.style.display = "none";
+        icon.textContent = "+";
+    } else {
+        content.style.display = "block";
+        icon.textContent = "−";
+    }
+}
+</script>
+
+
+<!-- Footer -->
+<footer style="background:#002b5b;color:white;text-align:center;padding:20px;font-size:15px;">
+    © 2025 Loan Recovery Pro Services | All Rights Reserved. | Confidential & Secure Services
+</footer>
+
+
+
+{% endblock %} 

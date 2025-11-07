@@ -1,0 +1,514 @@
+{% extends "includes/base.html" %}
+{% load static %}
+{% block content %}
+
+<!-- Root wrapper keeps your body styles without breaking Django extends -->
+<div style="font-family:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;color:#1b2b3b;">
+
+  <!-- Small utility styles + animation fix -->
+  <style>
+    /* Smooth fade-up animation */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity .45s ease, transform .45s ease;
+    }
+    .fade-up.show {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Feature Card Hover Fix */
+    .feature-card {
+      transition: all .3s ease;
+      height: 100%;
+    }
+    .feature-card:hover {
+      box-shadow: 0 10px 30px rgba(16, 24, 40, .12);
+      transform: translateY(-6px);
+      border-color: #cfd9e8 !important;
+    }
+    .feature-card:hover i {
+      transform: scale(1.2);
+      transition: transform .3s ease;
+    }
+
+    /* Responsive grid fix for service cards */
+    @media (min-width: 768px) {
+      .services-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .services-row > div[class*='col-'] {
+        display: flex;
+      }
+    }
+
+    /* Fix for mobile spacing */
+    @media (max-width: 575.98px) {
+      .hero-cta {
+        width: 100%;
+      }
+    }
+
+    /* Text alignment fix for section titles */
+    .section-title {
+      color: #002b5c;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  </style>
+
+
+
+  <!-- HERO -->
+  <header style="background:linear-gradient(135deg,#0d3b66 0%, #0d6efd 100%); color:#fff; padding:60px 20px; text-align:center;">
+    <div class="container" style="max-width:1100px;">
+      <h1 style="font-size:36px; font-weight:800; margin-bottom:10px;">Collections & Professional Services</h1>
+      <p style="font-size:18px; color:#e6f0ff; max-width:900px; margin:0 auto 18px;">
+        Ethical, RBI-compliant loan recovery and end-to-end BPO services for Banks, NBFCs, Fintechs & Corporates. Technology-led, people-driven, results-focused.
+      </p>
+      <div style="display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap;">
+        <a href="#services" class="btn btn-light hero-cta" style="padding:12px 26px;border-radius:999px;font-weight:600;color:#003366;">Explore Services</a>
+        <a href="#contact" class="btn btn-outline-light hero-cta" style="padding:12px 26px;border-radius:999px;font-weight:600;color:#fff;border-color:rgba(255,255,255,0.35);">Contact Sales</a>
+        <button class="btn btn-primary hero-cta" style="padding:12px 26px;border-radius:999px;background:#ffb703;border:none;color:#082032;font-weight:700;" data-bs-toggle="modal" data-bs-target="#careersModal">Careers / Submit CV</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- INTRO & VALUE -->
+  <section style="padding:46px 20px;background:#f8fafc;">
+    <div class="container" style="max-width:1100px;">
+      <div class="row align-items-center">
+        <div class="col-md-7 fade-up" id="intro" style="padding-right:24px;">
+          <h2 style="color:#002b5c;font-weight:700;">Trusted Collections Partner — Compliance First, Results Always</h2>
+          <p style="color:#444;margin-top:12px;line-height:1.7;">
+            SynergiPro provides structured recovery programs across DPD 0–365+. We combine skilled human intervention, analytics-driven segmentation, and secure technology to recover dues ethically while preserving customer dignity and brand trust.
+          </p>
+
+          <ul style="color:#444; margin-top:18px; line-height:1.7;">
+            <li><strong>End-to-end collections:</strong> Pre-legal, mid-stage, hard buckets & legal escalation.</li>
+            <li><strong>Tech-enabled:</strong> Predictive dialers, speech analytics, dashboards & automated payment links.</li>
+            <li><strong>Compliance & security:</strong> RBI-aligned processes, encrypted data handling, and audit-ready reports.</li>
+          </ul>
+        </div>
+
+        <div class="col-md-5 fade-up" id="intro-metrics" style="padding-left:24px;">
+          <div style="background:#fff;padding:22px;border-radius:12px;box-shadow:0 10px 30px rgba(16,24,40,0.06);">
+            <h5 style="color:#003366;font-weight:700;margin-bottom:12px;">Key Performance Metrics</h5>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <div style="flex:1; min-width:140px; text-align:center; padding:10px;">
+                <div style="font-size:28px;color:#0d6efd;font-weight:800;">95%</div>
+                <div style="font-size:13px;color:#6c757d;">Recovery (DPD 0–90)</div>
+              </div>
+              <div style="flex:1; min-width:140px; text-align:center; padding:10px;">
+                <div style="font-size:28px;color:#0d6efd;font-weight:800;">150+</div>
+                <div style="font-size:13px;color:#6c757d;">Cities Covered</div>
+              </div>
+              <div style="flex:1; min-width:140px; text-align:center; padding:10px;">
+                <div style="font-size:28px;color:#0d6efd;font-weight:800;">24×7</div>
+                <div style="font-size:13px;color:#6c757d;">Omnichannel Support</div>
+              </div>
+            </div>
+            <p style="font-size:13px;color:#6c757d;margin-top:12px;">Transparent SLAs, daily MIS & dedicated client success manager for every engagement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- DETAILED SERVICES -->
+  <section id="services" style="padding:56px 20px;">
+    <div class="container" style="max-width:1200px;">
+      <h3 class="section-title">Comprehensive Services</h3>
+      <p style="text-align:center;color:#556;margin-top:8px;max-width:900px;margin-left:auto;margin-right:auto;">
+        A complete suite of collection and support services — designed for lenders, fintechs and corporate receivables teams.
+      </p>
+
+      <!-- FIXED ROW (No inline gap, consistent Bootstrap gutters) -->
+      <div class="row services-row g-4 mt-3">
+
+        <!-- Service Card -->
+        <div class="col-lg-4 col-md-6 fade-up">
+          <div class="p-4 feature-card" style="background:#fff;border-radius:12px;border:1px solid #e9eef6;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="background:linear-gradient(135deg,#e6f0ff,#d8e8ff);padding:14px;border-radius:10px;">
+                <i class="bi bi-cash-stack" style="font-size:22px;color:#0d6efd;"></i>
+              </div>
+              <h5 style="margin:0;font-weight:700;color:#003366;">Loan Recovery & Collections</h5>
+            </div>
+            <p style="color:#555;margin-top:10px;">Soft-to-hard recovery campaigns, settlements, EMI structuring and legal escalation under RBI guidelines. Custom KPIs & client-specific ROIs.</p>
+            <ul style="color:#555;font-size:14px;margin-top:8px;">
+              <li>DPD segmentation & priority routing</li>
+              <li>Payment link integration (UPI, netbanking)</li>
+              <li>Settlement approval workflows</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 fade-up">
+          <div class="p-4 feature-card" style="background:#fff;border-radius:12px;border:1px solid #e9eef6;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="background:linear-gradient(135deg,#fff0db,#fff6e0);padding:14px;border-radius:10px;">
+                <i class="bi bi-people-fill" style="font-size:22px;color:#ff9100;"></i>
+              </div>
+              <h5 style="margin:0;font-weight:700;color:#003366;">Customer Care (Voice & Non-Voice)</h5>
+            </div>
+            <p style="color:#555;margin-top:10px;">Inbound/outbound support, grievance resolution, and multilingual contact centre operations with SLA-driven dashboards.</p>
+            <ul style="color:#555;font-size:14px;margin-top:8px;">
+              <li>IVR, CRM & chatbot integration</li>
+              <li>24×7 multi-lingual agents</li>
+              <li>Quality audits & CSAT tracking</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 fade-up">
+          <div class="p-4 feature-card" style="background:#fff;border-radius:12px;border:1px solid #e9eef6;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="background:linear-gradient(135deg,#ebf8ef,#dff6e6);padding:14px;border-radius:10px;">
+                <i class="bi bi-graph-up" style="font-size:22px;color:#0f9d58;"></i>
+              </div>
+              <h5 style="margin:0;font-weight:700;color:#003366;">Data Management & Analytics</h5>
+            </div>
+            <p style="color:#555;margin-top:10px;">MIS, dashboards, predictive scoring, portfolio analytics, and reconciliation — enabling smarter recovery decisions and higher recoveries.</p>
+            <ul style="color:#555;font-size:14px;margin-top:8px;">
+              <li>Power BI / Tableau dashboards</li>
+              <li>Predictive propensity-to-pay models</li>
+              <li>Daily / weekly MIS & exception reports</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- More Services -->
+        <div class="col-lg-4 col-md-6 fade-up">
+          <div class="p-4 feature-card" style="background:#fff;border-radius:12px;border:1px solid #e9eef6;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="background:linear-gradient(135deg,#efe7ff,#f6ecff);padding:14px;border-radius:10px;">
+                <i class="bi bi-geo-alt" style="font-size:22px;color:#6f42c1;"></i>
+              </div>
+              <h5 style="margin:0;font-weight:700;color:#003366;">Field & On-Ground Recovery</h5>
+            </div>
+            <p style="color:#555;margin-top:10px;">Trained field agents for doorstep negotiation, secured asset verification and repossession coordination when required.</p>
+            <ul style="color:#555;font-size:14px;margin-top:8px;">
+              <li>Agent ID & authorization verification</li>
+              <li>Geo-tagged field reports</li>
+              <li>Safety & compliance protocols</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 fade-up">
+          <div class="p-4 feature-card" style="background:#fff;border-radius:12px;border:1px solid #e9eef6;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="background:linear-gradient(135deg,#ffeef0,#fff0f3);padding:14px;border-radius:10px;">
+                <i class="bi bi-file-earmark-text" style="font-size:22px;color:#d6336c;"></i>
+              </div>
+              <h5 style="margin:0;font-weight:700;color:#003366;">Legal & Compliance Support</h5>
+            </div>
+            <p style="color:#555;margin-top:10px;">Legal notice drafting, SARFAESI support, Lok Adalat handling and court coordination with experienced legal partners.</p>
+            <ul style="color:#555;font-size:14px;margin-top:8px;">
+              <li>Notice templates & audit trails</li>
+              <li>Legal team coordination & case tracking</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 fade-up">
+          <div class="p-4 feature-card" style="background:#fff;border-radius:12px;border:1px solid #e9eef6;">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="background:linear-gradient(135deg,#fff9db,#fff7d1);padding:14px;border-radius:10px;">
+                <i class="bi bi-megaphone" style="font-size:22px;color:#ff7b00;"></i>
+              </div>
+              <h5 style="margin:0;font-weight:700;color:#003366;">Telecalling & Lead Generation</h5>
+            </div>
+            <p style="color:#555;margin-top:10px;">High-quality lead lists, appointment setting, tele-sales, and nurture campaigns to maximize conversions and collections.</p>
+            <ul style="color:#555;font-size:14px;margin-top:8px;">
+              <li>Script optimization & A/B testing</li>
+              <li>Performance-based engagement models</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTION PROCESS - TIMELINE -->
+  <section style="padding:56px 20px;background:#f1f7ff;">
+    <div class="container" style="max-width:1100px;">
+      <h3 style="color:#002b5c;font-weight:700;text-align:center;">Structured Collection Process (DPD-based)</h3>
+      <p style="text-align:center;color:#556;margin-top:8px;">A compliant, stage-wise approach with measurable outcomes and escalation controls.</p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:18px;margin-top:30px;justify-content:center;">
+        <!-- timeline cards -->
+        <div style="flex:1;min-width:220px;max-width:320px;background:#fff;padding:22px;border-radius:12px;border:1px solid #e6eefb;">
+          <h5 style="color:#0d6efd;font-weight:700;">DPD 0–30 • Early Engagement</h5>
+          <p style="color:#444;">Automated reminders, soft calls, and payment facilitation to prevent slippage. Highest customer experience focus.</p>
+          <p style="font-size:13px;color:#6c757d;margin-top:6px;"><strong>Outcome:</strong> High promise-to-pay rate; reduced escalation</p>
+        </div>
+
+        <div style="flex:1;min-width:220px;max-width:320px;background:#fff;padding:22px;border-radius:12px;border:1px solid #e6eefb;">
+          <h5 style="color:#0d6efd;font-weight:700;">DPD 31–90 • Negotiation Phase</h5>
+          <p style="color:#444;">Account segmentation, tailored settlement offers and supervisory approvals for structured recoveries.</p>
+          <p style="font-size:13px;color:#6c757d;margin-top:6px;"><strong>Outcome:</strong> Maximized recoveries with minimal legal cost</p>
+        </div>
+
+        <div style="flex:1;min-width:220px;max-width:320px;background:#fff;padding:22px;border-radius:12px;border:1px solid #e6eefb;">
+          <h5 style="color:#0d6efd;font-weight:700;">DPD 91–180 • Intensified Recovery</h5>
+          <p style="color:#444;">Field visits, legal notices, and intensive follow-ups with compliance logs and client approvals.</p>
+          <p style="font-size:13px;color:#6c757d;margin-top:6px;"><strong>Outcome:</strong> Balanced recovery vs. legal overhead</p>
+        </div>
+
+        <div style="flex:1;min-width:220px;max-width:320px;background:#fff;padding:22px;border-radius:12px;border:1px solid #e6eefb;">
+          <h5 style="color:#0d6efd;font-weight:700;">DPD 181+ • Legal & Closure</h5>
+          <p style="color:#444;">Legal escalation, auction coordination, settlements & final closure documentation with client reporting.</p>
+          <p style="font-size:13px;color:#6c757d;margin-top:6px;"><strong>Outcome:</strong> Final resolution, asset realization & compliance-certified closure</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE DRIVERS -->
+  <section style="padding:56px 20px;">
+    <div class="container" style="max-width:1100px;">
+      <h3 style="color:#002b5c;font-weight:700;text-align:center;">Why Choose SynergiPro</h3>
+      <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:22px;justify-content:center;">
+        <div style="flex:1;min-width:220px;padding:18px;background:#fff;border-radius:12px;border:1px solid #e8eef8;">
+          <i class="bi bi-shield-check" style="font-size:22px;color:#0d6efd;"></i>
+          <h6 style="margin-top:10px;font-weight:700;">Compliance-First</h6>
+          <p style="color:#555;font-size:14px;">RBI & legal compliance embedded in processes; audit-ready records and training.</p>
+        </div>
+
+        <div style="flex:1;min-width:220px;padding:18px;background:#fff;border-radius:12px;border:1px solid #e8eef8;">
+          <i class="bi bi-gear" style="font-size:22px;color:#0d6efd;"></i>
+          <h6 style="margin-top:10px;font-weight:700;">Custom Technology</h6>
+          <p style="color:#555;font-size:14px;">Integrations, dashboards, and predictive scoring to boost collector productivity.</p>
+        </div>
+
+        <div style="flex:1;min-width:220px;padding:18px;background:#fff;border-radius:12px;border:1px solid #e8eef8;">
+          <i class="bi bi-people" style="font-size:22px;color:#0d6efd;"></i>
+          <h6 style="margin-top:10px;font-weight:700;">Experienced Teams</h6>
+          <p style="color:#555;font-size:14px;">Trained agents, legal counsel & field supervisors aligned with client SLAs.</p>
+        </div>
+
+        <div style="flex:1;min-width:220px;padding:18px;background:#fff;border-radius:12px;border:1px solid #e8eef8;">
+          <i class="bi bi-bar-chart-line" style="font-size:22px;color:#0d6efd;"></i>
+          <h6 style="margin-top:10px;font-weight:700;">Transparent Reporting</h6>
+          <p style="color:#555;font-size:14px;">Daily MIS, exception dashboards & client self-service portal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section style="padding:56px 20px;background:#f7fbff;">
+    <div class="container" style="max-width:960px;">
+      <h3 style="text-align:center;color:#002b5c;font-weight:700;">What Our Clients Say</h3>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:24px;justify-content:center;">
+        <div style="flex:1;min-width:280px;background:#fff;padding:20px;border-radius:10px;border:1px solid #eef4ff;">
+          <p style="color:#444;font-style:italic;">“SynergiPro delivered measurable improvements in recovery across our retail portfolio. Reporting is crisp and the team is responsive.”</p>
+          <p style="font-weight:700;color:#003366;margin-top:8px;">— Head of Collections, National NBFC</p>
+        </div>
+        <div style="flex:1;min-width:280px;background:#fff;padding:20px;border-radius:10px;border:1px solid #eef4ff;">
+          <p style="color:#444;font-style:italic;">“Their tech-enabled approach and compliance framework made collaboration effortless. Great partner.”</p>
+          <p style="font-weight:700;color:#003366;margin-top:8px;">— COO, Fintech MSME Lender</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:56px 20px;">
+    <div class="container text-center" style="max-width:900px;">
+      <h3 style="color:#002b5c;font-weight:700;">Ready to Reduce NPAs & Improve Liquidity?</h3>
+      <p style="color:#556;max-width:800px;margin:10px auto;">Schedule a free consultation and portfolio health check — we will present a recovery action plan and expected ROI tailored to your portfolio.</p>
+      <div style="margin-top:18px;">
+        <a href="#contact" class="btn btn-outline-primary" style="padding:12px 24px;border-radius:40px;margin-right:8px;">Request Consultation</a>
+        <a href="#services" class="btn btn-primary" style="padding:12px 24px;border-radius:40px;background:#0d6efd;border:none;">Download Brochure</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & MAP -->
+  <section id="contact" style="padding:50px 20px;background:#fff;">
+    <div class="container" style="max-width:1100px;">
+      <div class="row gy-4">
+        <div class="col-lg-5 fade-up">
+          <h4 style="color:#002b5c;font-weight:700;">Contact & Office</h4>
+          <p style="color:#555;">For commercial enquiries, partnerships, onboarding and careers, contact our dedicated teams below.</p>
+
+          <div style="background:#f8fafc;padding:18px;border-radius:12px;border:1px solid #e9f0ff;">
+            <p style="margin:0;"><strong>Head Office:</strong></p>
+            <p style="margin:6px 0 0;color:#444;">
+              Jb/6, 1st Floor, Plot No.74/666,<br>
+              Jagda, Sundergarh, Koida, Odisha, India - 769042
+            </p>
+
+            <p style="margin-top:12px;"><strong>Business Enquiries</strong><br>
+              <a href="mailto:business@synergipro.com">business@synergipro.com</a> | +91-78270 39818
+            </p>
+
+            <p style="margin-top:8px;"><strong>Careers</strong><br>
+              <a href="mailto:hr@synergipro.com">hr@synergipro.com</a> | Mention position & location
+            </p>
+
+            <p style="margin-top:8px;"><strong>Support</strong><br>
+              <a href="mailto:support@synergipro.com">support@synergipro.com</a> | +91-87654 32109
+            </p>
+
+            <p style="margin-top:12px;font-size:13px;color:#6c757d;">Office Hours: Mon–Sat 09:30–18:30 (IST). Sunday: Closed</p>
+          </div>
+        </div>
+
+        <div class="col-lg-7 fade-up">
+          <div style="background:#f8fafc;padding:18px;border-radius:12px;border:1px solid #e9f0ff;">
+            <h5 style="margin-top:0;color:#002b5c;font-weight:700;">Quick Enquiry</h5>
+
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-success" style="border-radius:10px;">{{ message }}</div>
+              {% endfor %}
+            {% endif %}
+
+            <form id="contactForm" action="/quick-enquiry/" method="post" style="margin-top:12px;">
+              {% csrf_token %}
+              <div class="row g-2">
+                <div class="col-md-6">
+                  <input type="text" id="cname" name="name" placeholder="Full name *" required
+                         style="width:100%;padding:10px;border:1px solid #dfe9f8;border-radius:8px;">
+                </div>
+                <div class="col-md-6">
+                  <input type="email" id="cemail" name="email" placeholder="Email *" required
+                         style="width:100%;padding:10px;border:1px solid #dfe9f8;border-radius:8px;">
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" id="cphone" name="phone" placeholder="Phone"
+                         style="width:100%;padding:10px;border:1px solid #dfe9f8;border-radius:8px;">
+                </div>
+                <div class="col-md-6">
+                  <select id="ctype" name="type"
+                          style="width:100%;padding:10px;border:1px solid #dfe9f8;border-radius:8px;">
+                    <option value="">Select Enquiry Type</option>
+                    <option>Collections Partnership</option>
+                    <option>Technology Integration</option>
+                    <option>Careers</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <textarea id="cmsg" name="message" rows="4" placeholder="Brief message..."
+                            style="width:100%;padding:10px;border:1px solid #dfe9f8;border-radius:8px;"></textarea>
+                </div>
+                <div class="col-12 text-end">
+                  <button type="submit"
+                          style="background:#0d6efd;color:#fff;padding:10px 24px;border:none;border-radius:8px;">
+                    Send Enquiry
+                  </button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+          <div style="margin-top:16px;border-radius:12px;overflow:hidden;">
+            <!-- Google Maps with your address -->
+            <iframe
+              width="100%"
+              height="320"
+              style="border:0;"
+              loading="lazy"
+              allowfullscreen
+              src="https://www.google.com/maps?q=Jb/6%201st%20Floor%20Plot%20No.74/666%20Jagda%20Sundergarh%20Koida%20Odisha%20769042&output=embed">
+            </iframe>
+          </div>
+
+          <div style="margin-top:12px;font-size:13px;color:#6c757d;">
+            <strong>Click Here For All The Companies At 769042:</strong>
+            <a href="https://www.google.com/maps/search/?api=1&query=769042" target="_blank"> View nearby businesses (Google Maps)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CAREERS / SUBMIT CV MODAL -->
+  <div class="modal fade" id="careersModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius:12px;">
+        <div class="modal-header" style="border-bottom:none;">
+          <h5 class="modal-title" style="font-weight:700;color:#002b5c;">Submit Your Resume</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" style="padding:20px;">
+          <form id="careersForm" action="{% url 'submit_cv' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div style="margin-bottom:10px;">
+              <input type="text" name="name" placeholder="Full name *" required
+                style="width:100%;padding:10px;border:1px solid #dfe9f8;border-radius:8px;">
+            </div>
+
+            <div style="margin-bottom:10px;">
+              <input type="email" name="email" placeholder="Email *" required
+                style="width:100%;padding:10px;border:1px solid #dfe9f8;border-radius:8px;">
+            </div>
+
+            <div style="margin-bottom:10px;">
+              <input type="text" name="position" placeholder="Position applying for"
+                style="width:100%;padding:10px;border:1px solid #dfe9f8;border-radius:8px;">
+            </div>
+
+            <div style="margin-bottom:12px;">
+              <input type="file" name="resume" accept=".pdf,.doc,.docx" required
+                style="width:100%;padding:6px;border:1px solid #dfe9f8;border-radius:8px;">
+            </div>
+
+            <div style="display:flex;gap:10px;justify-content:flex-end;">
+              <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" class="btn btn-primary" style="background:#0d6efd;border:none;">Submit Resume</button>
+            </div>
+
+            <p style="font-size:13px;color:#6c757d;margin-top:10px;">
+              We do not charge applicants at any stage. Learn more in our
+              <a href="#apply">careers policy</a>.
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SMALL JS: Bootstrap + simple animation & form handlers -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // small fade-up trigger on scroll
+    function reveal() {
+      document.querySelectorAll('.fade-up').forEach(function(el){
+        var rect = el.getBoundingClientRect();
+        if (rect.top < (window.innerHeight - 60)) el.classList.add('show');
+      });
+    }
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', function(){ reveal(); });
+
+    // simple form submission handlers (demo only - replace with real backend)
+    document.getElementById('contactForm')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thank you — your enquiry has been received. Our team will contact you shortly.');
+      this.reset();
+    });
+    document.getElementById('careersForm')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Resume submitted. If shortlisted, HR will contact you.');
+      var modalEl = document.getElementById('careersModal');
+      var modal = bootstrap.Modal.getInstance(modalEl) || new bootstrap.Modal(modalEl);
+      modal.hide();
+      this.reset();
+    });
+  </script>
+
+</div>
+{% endblock content %}
