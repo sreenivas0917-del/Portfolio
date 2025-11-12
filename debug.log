@@ -1,0 +1,23 @@
+[2025-11-12 11:09:34,273] INFO django.utils.autoreload — Watching for file changes with StatReloader
+[2025-11-12 11:09:52,655] INFO django.utils.autoreload — Watching for file changes with StatReloader
+[2025-11-12 11:09:55,859] INFO django.server — "GET /career/ HTTP/1.1" 200 12833
+[2025-11-12 11:09:56,092] INFO django.server — "GET /static/vendor/aos/aos.css HTTP/1.1" 200 28765
+[2025-11-12 11:09:56,097] INFO django.server — "GET /static/img/logo.png HTTP/1.1" 200 67441
+[2025-11-12 11:09:56,103] INFO django.server — "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 80721
+[2025-11-12 11:09:56,105] INFO django.server — "GET /static/vendor/glightbox/css/glightbox.min.css HTTP/1.1" 200 13749
+[2025-11-12 11:09:56,110] INFO django.server — "GET /static/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 232803
+[2025-11-12 11:09:56,113] INFO django.server — "GET /static/vendor/bootstrap-icons/bootstrap-icons.css HTTP/1.1" 200 98255
+[2025-11-12 11:09:56,114] INFO django.server — "GET /static/vendor/swiper/swiper-bundle.min.css HTTP/1.1" 200 18432
+[2025-11-12 11:09:56,122] INFO django.server — "GET /static/css/main.css HTTP/1.1" 200 100069
+[2025-11-12 11:09:56,657] INFO django.server — "GET /static/vendor/php-email-form/validate.js HTTP/1.1" 200 2649
+[2025-11-12 11:09:56,658] INFO django.server — "GET /static/vendor/isotope-layout/isotope.pkgd.min.js HTTP/1.1" 200 35445
+[2025-11-12 11:09:56,659] INFO django.server — "GET /static/vendor/aos/aos.js HTTP/1.1" 200 13800
+[2025-11-12 11:09:56,660] INFO django.server — "GET /static/vendor/glightbox/js/glightbox.min.js HTTP/1.1" 200 56300
+[2025-11-12 11:09:56,670] INFO django.server — "GET /static/js/main.js HTTP/1.1" 200 10309
+[2025-11-12 11:09:56,676] INFO django.server — "GET /static/vendor/swiper/swiper-bundle.min.js HTTP/1.1" 200 151102
+[2025-11-12 11:09:56,680] WARNING django.server — "GET /static/vendor/purecounter/purecounter_vanilla.js HTTP/1.1" 404 1983
+[2025-11-12 11:09:57,674] INFO django.server — "GET /static/img/favicon.png HTTP/1.1" 200 113839
+[2025-11-12 11:10:25,143] INFO synergiContent.views — EmailJS response: 403 API calls are disabled for non-browser applications
+[2025-11-12 11:10:25,146] ERROR django.request — Internal Server Error: /career/apply/
+[2025-11-12 11:10:25,147] ERROR django.server — "POST /career/apply/ HTTP/1.1" 500 111
+[2025-11-12 11:10:41,246] INFO django.utils.autoreload — C:\Dachhu7\SYNERGIPRO\mainApplication\settings.py changed, reloading.
